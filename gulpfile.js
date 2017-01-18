@@ -147,7 +147,8 @@ var gulp      = require('gulp'),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss');
+    kss         = require('kss'),
+    cache = require('gulp-cached');
 
 // The default task.
 gulp.task('default', ['build']);
@@ -168,9 +169,10 @@ var sassFiles = [
   '!' + options.theme.components + 'style-guide/kss-example-chroma.scss'
 ];
 
-gulp.task('styles', ['clean:css'], function () {
+gulp.task('styles', function () {
   return gulp.src(sassFiles)
     .pipe($.sourcemaps.init())
+    .pipe(cache())
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.rename({dirname: ''}))
@@ -261,7 +263,7 @@ gulp.task('browser-sync', ['watch:css'], function () {
   });
 });
 
-gulp.task('watch:css', ['styles'], function () {
+gulp.task('watch:css', ['clean:css', 'styles'], function () {
   return gulp.watch(options.theme.components + '**/*.scss', options.gulpWatchOptions, ['styles']);
 });
 
