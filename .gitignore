@@ -1,2 +1,4 @@
 node_modules
 *.map
+styleguide/*
+components/asset-builds/

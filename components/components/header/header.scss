@@ -6,17 +6,38 @@
 //
 // Style guide: components.header
 
+$logo_width: 100px;
+
 .header,
 %header {
+
+  background-color: #2e3192;
+  color: white;
+  min-height: 130px;
+  position: relative;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
   // Wrapping link for logo.
-  &__logo {
+  .block-system-branding-block {
     float: left;
     margin: 0 10px 0 0;
     padding: 0;
+    position: relative;
 
     @include rtl() {
       float: right;
       margin: 0 0 0 10px;
+    }
+
+    .site-name {
+      position: absolute;
+      width: 600px;
+      top: 0;
+      left: $logo_width;
     }
   }
 
@@ -67,5 +88,33 @@
   &__region {
     // Clear the logo.
     clear: both;
+  }
+
+  .block-superfishmain {
+    position: absolute;
+    bottom: 0;
+    left: $logo_width;
+    width: auto;
+
+    a:hover,
+    .sfHover > a {
+      background-color: #2E3159;
+    }
+
+    ul.sf-menu .sf-sub-indicator {
+      height: 20px;
+    }
+
+    ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
+      top: 3em;
+    }
+
+    li a {
+      color: white;
+    }
+
+    .menuparent ul {
+      background-color: #2E3192;
+    }
   }
 }

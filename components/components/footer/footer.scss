@@ -12,4 +12,18 @@
   @include margin-top(2, s);
   @include padding(1 0, s);
   border-top: 1px solid color(border);
+
+  background-color: #e2e2e2;
+
+  padding-bottom: 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav {
+    background-color: #2e3192;
+    min-height: 80px;
+  }
 }
