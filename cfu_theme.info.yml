@@ -79,6 +79,7 @@ libraries:
   - cfu_theme/nav-menu
   - cfu_theme/navbar
   - cfu_theme/pager
+  - cfu_theme/slick-carousel
 
 
 # This section is used by the contrib module, Component Libraries. It allows you
@@ -122,4 +123,3 @@ regions:
   # html.html.twig to work properly, so do not delete them.
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-

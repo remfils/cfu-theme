@@ -182,3 +182,13 @@ wireframe:
   css:
     component:
       components/asset-builds/css/wireframe.css: {}
+
+slick-carousel:
+  css:
+    component:
+      components/asset-builds/css/slick-carousel.css: {}
+  js:
+    components/components/slick-carousel/slick-carousel.js: {}
+  dependencies:
+    - core/jquery
+    - libraries/slick
