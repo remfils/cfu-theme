@@ -14,14 +14,13 @@
           
           e.handled = true;
         }
-      })
+      });
+
+      $('.slick__slider', context).on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+        var current_slide_label = $(slick.$slides[nextSlide]).find('.views-field-title a').html();
+
+        $('.slick h3').html(current_slide_label);
+      });
     }
   }
 })(jQuery, Drupal, drupalSettings);
-
-
-(function ($) {
-  setTimeout(function() {
-//    
-  }, 1);
-})(jQuery);

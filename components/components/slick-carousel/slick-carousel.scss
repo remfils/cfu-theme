@@ -18,6 +18,27 @@
       padding-left: 30px;
     }
 
+    .slick__arrow {
+      width: 75px;
+      top: auto;
+      bottom: 15px;
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+      color: white;
+      font-size: 18px;
+    }
+
+    
+    .slick-next::before {
+      content: '>'
+    }
+
+    .slick-prev::before {
+      content: '<'
+    }
+
     .slick-dots {
       bottom: 0;
       left: 70px;
