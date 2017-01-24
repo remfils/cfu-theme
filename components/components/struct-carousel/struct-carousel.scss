@@ -1,4 +1,128 @@
+@import 'init';
+
+$vpo-color: #a01f62;
+$spo-color: #2e3192;
+$no-color: #ffc208;
+
 .view-carousel-struct-units {
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  height: 300px;
+  
   .views-field-field-title {
+  }
+
+  .struct-type {
+    display: none;
+  }
+
+  /* #struct borders */
+  
+  .views-field-field-image img {
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+  }
+
+  .struct_vpo > .views-field-field-image img {
+    border-color: $vpo-color;
+  }
+  .struct_spo > .views-field-field-image img {
+    border-color: $spo-color;
+  }
+  .struct_тo > .views-field-field-image img {
+    border-color: $no-color;
+  }
+
+  .struct_vpo {
+    border-color: red;
+  }
+
+  .views-field-field-image {
+  }
+
+  .views-field-field-image img {
+    margin: 0 auto;
+    border-radius: 50%;    
+  }
+
+  .views-field-field-title .field-content {
+    text-align: center;
+  }
+
+  .slick__arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+
+  .slick-prev {
+    left: -50px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 22px;
+    color: gray;
+  }
+
+  .slick-prev:before {
+    content: '<';
+  }
+
+  .slick-next:before {
+    content: '>';
+  }
+
+  .slick-next {
+    right: 50px;
+  }
+}
+
+.struct-filter {
+  margin-bottom: 30px;
+  
+  &__btn {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-color: light-gray;
+  }
+
+  .struct_vpo {
+    background-color: darken($vpo-color, 25);
+  }
+  .struct_spo {
+    background-color: darken($spo-color, 25);
+  }
+  .struct_тo {
+    background-color: darken($no-color, 25);
+  }
+  
+  .active.struct_vpo {
+    background-color: $vpo-color;
+  }
+  .active.struct_spo {
+    background-color: $spo-color;
+  }
+  .active.struct_тo {
+    background-color: $no-color;
+  }
+
+  .struct_vpo:hover {
+    background-color: darken($vpo-color, 15);
+  }
+  .struct_spo:hover {
+    background-color: darken($spo-color, 15);
+  }
+  .struct_тo:hover {
+    background-color: darken($no-color, 15);
   }
 }
