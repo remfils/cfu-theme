@@ -1,3 +1,9 @@
+@import 'init';
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
 .slick {
   &__slide {
     .views-field-title {
