@@ -79,7 +79,8 @@ libraries:
   - cfu_theme/nav-menu
   - cfu_theme/navbar
   - cfu_theme/pager
-  - cfu_theme/slick-carousel
+  - cfu_theme/news-carousel
+  - cfu_theme/struct-carousel
 
 
 # This section is used by the contrib module, Component Libraries. It allows you

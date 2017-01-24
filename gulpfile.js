@@ -113,7 +113,9 @@ options.styleGuide = {
     path.relative(options.rootPath.styleGuide, options.theme.css + 'pager.css'),
     path.relative(options.rootPath.styleGuide, options.theme.css + 'skip-link.css'),
     path.relative(options.rootPath.styleGuide, options.theme.css + 'tabs.css'),
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'slick-carousel.css'),
+    //path.relative(options.rootPath.styleGuide, options.theme.css + 'slick-carousel.css'),
+    path.relative(options.rootPath.styleGuide, options.theme.css + 'news-carousel.css'),
+    path.relative(options.rootPath.styleGuide, options.theme.css + 'struct-carousel.css'),
   ],
   js: [
   ],

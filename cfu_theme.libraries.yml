@@ -183,12 +183,20 @@ wireframe:
     component:
       components/asset-builds/css/wireframe.css: {}
 
-slick-carousel:
+news-carousel:
   css:
     component:
-      components/asset-builds/css/slick-carousel.css: {}
+      components/asset-builds/css/news-carousel.css: {}
   js:
-    components/components/slick-carousel/slick-carousel.js: {}
+    components/components/news-carousel/news-carousel.js: {}
   dependencies:
     - core/jquery
-    - libraries/slick
+
+struct-carousel:
+  css:
+    component:
+      components/asset-builds/css/struct-carousel.css: {}
+  js:
+    components/components/struct-carousel/struct-carousel.js: {}
+  dependencies:
+    - core/jquery
