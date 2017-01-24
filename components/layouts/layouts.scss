@@ -12,3 +12,16 @@
 // The layout-swap isn't used in page.html.twig. You may wish to remove it to
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
+
+.block > h2 {
+  background-color: #2e3192;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  min-width: 180px;
+  margin: 15px 0;
+}
+
+.block-views-blockcarousel-struct-units-block-1 {
+  background-color: #fff;
+}
