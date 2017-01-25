@@ -13,7 +13,7 @@
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
 
-.block > h2 {
+.cfu-block > h2 {
   background-color: #2e3192;
   color: white;
   display: inline-block;
@@ -22,16 +22,15 @@
   margin: 15px 0;
 }
 
-.block-views-blockview-anouncments-block-1,
-.block-views-blockcarousel-struct-units-block-1 {
+.cfu-block {
   padding-left: 15px;
   padding-right: 15px;
-}
 
-.block-views-blockview-anouncments-block-1 {
-  background-color: #e2e2e2;
-}
+  &--gray {
+    background-color: #e2e2e2;
+  }
 
-.block-views-blockcarousel-struct-units-block-1 {
-  background-color: #fff;
+  &--white {
+  background-color: #fff;    
+  }
 }
