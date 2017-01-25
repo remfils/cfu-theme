@@ -200,3 +200,9 @@ struct-carousel:
     components/components/struct-carousel/struct-carousel.js: {}
   dependencies:
     - core/jquery
+
+
+anouncment-block:
+  css:
+    component:
+      components/asset-builds/css/anouncment-block.css: {}

@@ -1,0 +1,41 @@
+@import 'init';
+@imoprt '_grids.scss';
+
+.anouncment-view {
+  $zen-column-count: 3;
+  $zen-gutter-width: 10px;
+  @include zen-grid-container;
+
+  height: 230px;
+
+  .view-content {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .anouncment-item {
+    width: 20%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .views-field-field-event-date {
+    height: 40px;
+    line-height: 40px;
+    background-color: #2e3192;
+    text-align: center;
+  }
+
+  .views-field-field-event-date .datetime {
+    color: white;
+    vertical-align: middle;
+  }
+
+  .anouncment-msg {
+    background-color: #fff;
+    min-height: 157px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

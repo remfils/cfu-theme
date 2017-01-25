@@ -81,6 +81,7 @@ libraries:
   - cfu_theme/pager
   - cfu_theme/news-carousel
   - cfu_theme/struct-carousel
+  - cfu_theme/anouncment-block
 
 
 # This section is used by the contrib module, Component Libraries. It allows you
