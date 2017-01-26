@@ -27,6 +27,7 @@
  *   comment/reply/12345).
  *
  * Regions:
+ * - page.control_header: Place for site controlls (lang btns and poor view)
  * - page.header: Items for the header region.
  * - page.primary_menu: Items for the primary menu region.
  * - page.secondary_menu: Items for the secondary menu region.
@@ -47,6 +48,10 @@
 
 {{ attach_library('cfu_theme/layouts') }}
 <div class="layout-center">
+
+  <div class="control-header">
+    {{ page.control_header }}
+  </div>
 
   <header class="header" role="banner">
     {{ page.header }}
