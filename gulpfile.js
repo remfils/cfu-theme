@@ -118,7 +118,8 @@ options.styleGuide = {
     // main page
     path.relative(options.rootPath.styleGuide, options.theme.css + 'news-carousel.css'),
     path.relative(options.rootPath.styleGuide, options.theme.css + 'struct-carousel.css'),
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'anouncment-block.css'),
+    //path.relative(options.rootPath.styleGuide, options.theme.css + 'anouncment-block.css'),
+    path.relative(options.rootPath.styleGuide, options.theme.css + 'main-page.css'),
   ],
   js: [
   ],

@@ -202,7 +202,12 @@ struct-carousel:
     - core/jquery
 
 
-anouncment-block:
+# anouncment-block:
+#   css:
+#     component:
+#       components/asset-builds/css/anouncment-block.css: {}
+
+main-page:
   css:
     component:
-      components/asset-builds/css/anouncment-block.css: {}
+      components/asset-builds/css/main-page.css: {}

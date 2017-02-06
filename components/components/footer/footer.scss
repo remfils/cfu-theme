@@ -24,8 +24,29 @@
     text-decoration: none;
   }
 
-  nav {
+  .footer-navigation {
     background-color: #2e3192;
     min-height: 80px;
   }
 }
+
+.footer-menu {
+  color: black;
+
+  .menu-item--expanded {
+    float: left;
+    display: inline-block;
+    width: 15%;
+    padding-left: 15px;
+
+    .menu {
+      margin-left: 0;
+      padding-top: 30px;
+    }
+  }
+
+  a {
+    color: black;
+  }
+}
+
