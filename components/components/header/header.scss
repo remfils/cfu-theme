@@ -10,15 +10,19 @@ $logo_width: 202px;
 
 .control-header {
   min-height: 30px;
+  margin-bottom: 130px;
 }
 
 .header,
 %header {
-
   background-color: #2e3192;
   color: white;
   min-height: 130px;
-  position: relative;
+  position: fixed;
+  transition: height 0.5s;
+  top: 30px;
+  width: 1600px;
+  z-index: 9999;
 
   a {
     color: white;
@@ -130,5 +134,24 @@ $logo_width: 202px;
     .menuparent ul {
       background-color: #2E3192;
     }
+  }
+}
+
+
+.header.fixed {
+  min-height: 50px;
+  top: 0;
+
+  .block-system-branding-block {
+    left: 15px;
+    bottom: 0;
+  }
+
+  .site-name a {
+    display: none;
+  }
+
+  .site-logo img {
+    height: 40px;
   }
 }

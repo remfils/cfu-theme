@@ -74,6 +74,8 @@ header:
   css:
     component:
       components/asset-builds/css/header.css: {}
+  js:
+    components/components/header/header.js: {}
   dependencies:
     - cfu_theme/clearfix
 
