@@ -6,7 +6,11 @@
 //
 // Style guide: components.header
 
-$logo_width: 100px;
+$logo_width: 202px;
+
+.control-header {
+  min-height: 30px;
+}
 
 .header,
 %header {
@@ -26,7 +30,9 @@ $logo_width: 100px;
     float: left;
     margin: 0 10px 0 0;
     padding: 0;
-    position: relative;
+    position: absolute;
+    bottom: -7px;
+    z-index: 100;
 
     @include rtl() {
       float: right;
@@ -34,10 +40,14 @@ $logo_width: 100px;
     }
 
     .site-name {
+      left: $logo_width + 20;
       position: absolute;
-      width: 600px;
-      top: 0;
-      left: $logo_width;
+      top: 60px;
+      width: 1000px;
+
+      a {
+        font-size: 25px;        
+      }
     }
   }
 
@@ -96,6 +106,10 @@ $logo_width: 100px;
     left: $logo_width;
     width: auto;
 
+    a {
+      transition: background-color 0.5s;
+    }
+    
     a:hover,
     .sfHover > a {
       background-color: #2E3159;
