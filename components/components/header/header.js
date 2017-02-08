@@ -1,8 +1,8 @@
 (function ($) {
   var $header = $('.header');
   var $window = $(window);
-  
-  $window.scroll(function() {
+
+  function makeHeaderFixed() {
     var scroll = $window.scrollTop();
 
     if (scroll >= 100) {
@@ -11,5 +11,9 @@
     else {
       $header.removeClass('fixed');
     }
-  });
+  }
+
+  makeHeaderFixed();
+  
+  $window.scroll(makeHeaderFixed);
 })(jQuery);
