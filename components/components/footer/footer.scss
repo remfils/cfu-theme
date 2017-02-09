@@ -50,3 +50,40 @@
   }
 }
 
+.footer-navigation {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  
+  &--contacts {
+    color: white;
+    left: 15px;
+    height: 100%;
+    line-height: 2;
+    position: absolute;
+
+    .menu {
+      display: inline-block;
+      margin-left: 30px;
+    }
+
+    .menu li {
+      display: inline-block;
+      padding: 0 15px;
+      
+      a {
+        color: white;
+      }
+    }
+  }
+
+  &--logo {
+    bottom: 0px;
+    position: absolute;
+    right: 30px;
+
+    img {
+      height: 120px;
+    }
+  }
+}

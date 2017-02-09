@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'block',
+    'block-menu',
+    'navigation',
+    'menu--' ~ derivative_plugin_id|clean_class,
+  ]
+%}
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
+  <div class="footer-navigation--contacts">
+
+    <span>© КФУ им. В.И.Вернадского {{ "now"|date("Y") }}</span>
+
+    {# Menu. #}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+  </div>
+
+  <div class="footer-navigation--logo">
+    <img alt="" src="{{ base_path ~ directory }}/logo.png"/>
+  </div>
+</nav>
