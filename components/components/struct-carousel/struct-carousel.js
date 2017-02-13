@@ -43,6 +43,10 @@
 
     $this.toggleClass('active');
 
+    setupStructCarouselItems();
+  });
+
+  function setupStructCarouselItems() {
     var filter_classes = [];
 
     $('.struct-filter__btn').each(function(index, item) {
@@ -53,11 +57,17 @@
       }
     });
 
+    toggleShowStructAllButton(filter_classes);
+
     $carousel.slick('slickUnfilter');
 
     $carousel.slick('slickFilter', function(index) {
       var $this = $(this);
       var i = filter_classes.length;
+
+      if (!i)
+        return true;
+      
       while (i--) {
         if ($this.hasClass(filter_classes[i])) {
           return true;
@@ -65,6 +75,27 @@
       }
       return false;
     });
+  }
+
+  function toggleShowStructAllButton (filter_classes) {
+    if (filter_classes.length) {
+      $('.struct-filter__btn-show-all').fadeIn(function() {
+        $('.struct-filter__btn-show-all').addClass('struct-filter__btn-show-all--active');
+      });
+    }
+    else {
+      $('.struct-filter__btn-show-all').fadeOut(function() {
+        $('.struct-filter__btn-show-all').removeClass('struct-filter__btn-show-all--active');
+      });
+    }
+  }
+
+  $('.struct-filter__btn-show-all').on('click', function() {
+    $('.struct-filter__btn').each(function() {
+      $(this).removeClass('active');
+    });
+
+    setupStructCarouselItems();
   });
 
 })(jQuery, Drupal, drupalSettings)

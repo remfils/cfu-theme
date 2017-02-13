@@ -32,16 +32,17 @@
 
 .footer-menu {
   color: black;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
-  > .menu {
-    min-height: 300px;
+  > .cfu-block--container > .menu {
+    margin: 0;
   }
 
   .menu-item--expanded {
     float: left;
     display: inline-block;
     width: 15%;
-    padding-left: 15px;
 
     .menu {
       margin-left: 0;
@@ -58,6 +59,10 @@
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
+
+  &--container {
+    min-height: 80px;
+  }
   
   &--contacts {
     color: white;

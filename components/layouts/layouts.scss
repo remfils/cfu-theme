@@ -7,13 +7,13 @@
 //
 // Style guide: layouts
 
-@import 'layout-3col/layout-3col';
-@import 'layout-center/layout-center';
+//@import 'layout-3col/layout-3col';
+//@import 'layout-center/layout-center';
 // The layout-swap isn't used in page.html.twig. You may wish to remove it to
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
 
-.cfu-block > h2 {
+.cfu-block > .cfu-block--container > h2 {
   background-color: #2e3192;
   color: white;
   display: inline-block;
@@ -28,11 +28,17 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  &--container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+  }
+
   &--gray {
     background-color: #e2e2e2;
   }
 
   &--white {
-  background-color: #fff;    
+    background-color: #fff;    
   }
 }

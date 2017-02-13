@@ -21,8 +21,13 @@ $logo_width: 202px;
   position: fixed;
   transition: height 0.5s;
   top: 30px;
-  width: 1600px;
+  width: 100%;
+  /* width: 1600px; */
   z-index: 9999;
+
+  .cfu-block--container {
+    min-height: 130px;
+  }
 
   a {
     color: white;
@@ -31,12 +36,12 @@ $logo_width: 202px;
   
   // Wrapping link for logo.
   .block-system-branding-block {
-    float: left;
     margin: 0 10px 0 0;
     padding: 0;
     position: absolute;
     bottom: -7px;
     z-index: 100;
+    width: 100%;
 
     @include rtl() {
       float: right;
@@ -52,6 +57,16 @@ $logo_width: 202px;
       a {
         font-size: 25px;        
       }
+    }
+  }
+
+  .header-block--vernadky-image {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+
+    img {
+      height: 155px;
     }
   }
 
@@ -141,6 +156,14 @@ $logo_width: 202px;
 .header.fixed {
   min-height: 50px;
   top: 0;
+
+  .header-block--vernadky-image {
+    display: none;
+  }
+
+  .cfu-block--container {
+    min-height: 50px;
+  }
 
   .block-system-branding-block {
     left: 15px;
