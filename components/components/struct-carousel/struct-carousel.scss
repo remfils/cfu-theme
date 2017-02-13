@@ -111,23 +111,23 @@ $no-color: #ffc208;
     background-color: light-gray;
   }
 
-  .struct_vpo {
+  .active.struct_vpo {
     background-color: darken($vpo-color, 25);
   }
-  .struct_spo {
+  .active.struct_spo {
     background-color: darken($spo-color, 25);
   }
-  .struct_тo {
+  .active.struct_тo {
     background-color: darken($no-color, 25);
   }
   
-  .active.struct_vpo {
+  .struct_vpo {
     background-color: $vpo-color;
   }
-  .active.struct_spo {
+  .struct_spo {
     background-color: $spo-color;
   }
-  .active.struct_тo {
+  .struct_тo {
     background-color: $no-color;
   }
 
