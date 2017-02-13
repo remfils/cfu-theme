@@ -10,6 +10,13 @@ $logo_width: 202px;
 
 .control-header {
   min-height: 30px;
+
+  .cfu-block--container {
+    padding-right: 100px;
+  }
+}
+
+.control-header.controll-header--placeholder {
   margin-bottom: 130px;
 }
 
@@ -18,9 +25,9 @@ $logo_width: 202px;
   background-color: #2e3192;
   color: white;
   min-height: 130px;
-  position: fixed;
+  /* position: fixed; */
   transition: height 0.5s;
-  top: 30px;
+  top: 32px;
   width: 100%;
   /* width: 1600px; */
   z-index: 9999;
@@ -154,6 +161,7 @@ $logo_width: 202px;
 
 
 .header.fixed {
+  position: fixed;
   min-height: 50px;
   top: 0;
 
