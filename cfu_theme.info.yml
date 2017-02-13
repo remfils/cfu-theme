@@ -83,6 +83,7 @@ libraries:
   - cfu_theme/struct-carousel
   #- cfu_theme/anouncment-block
   - cfu_theme/main-page
+  - cfu_theme/banners
 
 
 # This section is used by the contrib module, Component Libraries. It allows you
