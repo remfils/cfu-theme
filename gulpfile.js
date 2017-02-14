@@ -212,7 +212,8 @@ var jsFiles = [
 gulp.task('js', [], function () {
   return gulp.src(jsFiles)
     .pipe($.rename({dirname: ''}))
-    .pipe(gulp.dest(options.theme.js));
+    .pipe(gulp.dest(options.theme.js))
+    .pipe($.if(browserSync.active, browserSync.stream({match: '**/*.js'})));
 });
 
 // ##################
