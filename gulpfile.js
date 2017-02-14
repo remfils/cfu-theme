@@ -30,7 +30,7 @@ options.theme = {
   components : options.rootPath.theme + 'components/',
   build      : options.rootPath.theme + 'components/asset-builds/',
   css        : options.rootPath.theme + 'components/asset-builds/css/',
-  js         : options.rootPath.theme + 'js/'
+  js         : options.rootPath.theme + 'components/asset-builds/js/'
 };
 
 // Set the URL used to access the Drupal website under development. This will
@@ -122,6 +122,9 @@ options.styleGuide = {
     path.relative(options.rootPath.styleGuide, options.theme.css + 'main-page.css'),
   ],
   js: [
+    path.relative(options.rootPath.styleGuide, options.theme.js + 'header.js'),
+    path.relative(options.rootPath.styleGuide, options.theme.js + 'news-carousel.js'),
+    path.relative(options.rootPath.styleGuide, options.theme.js + 'struct-carousel.js'),
   ],
 
   homepage: 'homepage.md',
@@ -198,6 +201,20 @@ gulp.task('styles:production', ['clean:css'], function () {
     .pipe(gulp.dest(options.theme.css));
 });
 
+// ##########
+// Build JS.
+// ##########
+
+var jsFiles = [
+  options.theme.components + '**/*.js'
+];
+
+gulp.task('js', [], function () {
+  return gulp.src(jsFiles)
+    .pipe($.rename({dirname: ''}))
+    .pipe(gulp.dest(options.theme.js));
+});
+
 // ##################
 // Build style guide.
 // ##################
@@ -260,7 +277,7 @@ gulp.task('lint:sass-with-fail', function () {
 // ##############################
 gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
 
-gulp.task('browser-sync', ['watch:css'], function () {
+gulp.task('browser-sync', ['watch:css', 'watch:js'], function () {
   if (!options.drupalURL) {
     return Promise.resolve();
   }
@@ -281,8 +298,10 @@ gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function () 
   ], options.gulpWatchOptions, ['styleguide', 'lint:sass']);
 });
 
-gulp.task('watch:js', ['lint:js'], function () {
-  return gulp.watch(options.eslint.files, options.gulpWatchOptions, ['lint:js']);
+gulp.task('watch:js', ['lint:js', 'js'], function (done) {
+  gulp.watch(options.eslint.files, options.gulpWatchOptions, ['js']);
+  browserSync.reload();
+  done();
 });
 
 // ######################
@@ -307,6 +326,12 @@ gulp.task('clean:css', function () {
     options.theme.css + '**/*.map'
   ], {force: true});
 });
+
+gulp.task('clean:js', function () {
+  return del([
+    options.theme.js + '*.js'
+  ], {force: true});
+})
 
 
 // Resources used to create this gulpfile.js:

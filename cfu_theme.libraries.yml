@@ -75,7 +75,7 @@ header:
     component:
       components/asset-builds/css/header.css: {}
   js:
-    components/components/header/header.js: {}
+    components/asset-builds/js/header.js: {}
   dependencies:
     - cfu_theme/clearfix
 
@@ -190,7 +190,7 @@ news-carousel:
     component:
       components/asset-builds/css/news-carousel.css: {}
   js:
-    components/components/news-carousel/news-carousel.js: {}
+    components/asset-builds/js/news-carousel.js: {}
   dependencies:
     - core/jquery
 
@@ -199,7 +199,7 @@ struct-carousel:
     component:
       components/asset-builds/css/struct-carousel.css: {}
   js:
-    components/components/struct-carousel/struct-carousel.js: {}
+    components/asset-builds/js/struct-carousel.js: {}
   dependencies:
     - core/jquery
 
