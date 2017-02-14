@@ -32,7 +32,7 @@
   
   $carousel.slick({
     slidesToShow: 9,
-    slidesToScroll: 1,
+    slidesToScroll: 9,
     infinite: false,
   });
 
