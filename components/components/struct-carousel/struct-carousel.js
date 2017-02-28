@@ -3,13 +3,19 @@
 
   // move classes from struct points to slides
   $views.find('.slick__slider').each(function(index, item) {
-    var struct_type = $(item).find('.struct-type').html().trim();
+    var $item = $(item);
+    
+    var struct_type = $item.find('.struct-type').html().trim();
     // remove: filters debug output
     struct_type = struct_type.replace(/<!--([\s\S]*?)-->/mig, '').trim();
 
-    $(item).addClass(struct_type);
-  });
+    $item.addClass(struct_type);
 
+    // hack, because drupal cant link image to custom url
+    var struct_url = $item.find('.carousel-struct__url > a').attr('href');
+
+    $item.find('.views-field-field-image a').attr('href', struct_url);
+  });
   
   // place arrows
   $views.append('<div class="slick__arrows"></div>');
@@ -34,6 +40,7 @@
     slidesToShow: 9,
     slidesToScroll: 9,
     infinite: false,
+    draggable: false
   });
 
   // filter buttons

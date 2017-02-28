@@ -213,6 +213,8 @@ main-page:
   css:
     component:
       components/asset-builds/css/main-page.css: {}
+  js:
+    components/asset-builds/js/main-page.js: {}
 
 banners:
   css:
