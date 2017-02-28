@@ -34,6 +34,10 @@
     position: relative;
   }
 
+  &--overflow {
+    overflow: auto;
+  }
+
   &--gray {
     background-color: #e2e2e2;
   }
@@ -41,4 +45,12 @@
   &--white {
     background-color: #fff;    
   }
+}
+
+.second-level-page-container {
+  /* max-width: 1600px; */
+  /* margin: 0 auto; */
+  /* background-color: #fff; */
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
 }
