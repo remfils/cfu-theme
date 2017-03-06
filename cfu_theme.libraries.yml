@@ -225,3 +225,8 @@ news-page:
   css:
     component:
       components/asset-builds/css/news-page.css: {}
+
+page--node--news:
+  css:
+    component:
+      components/asset-builds/css/page--node--news.css: {}
