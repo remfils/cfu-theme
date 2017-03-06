@@ -13,6 +13,11 @@
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
 
+h1.page-title {
+  margin-bottom: 50px;  
+}
+
+h1.page-title,
 .cfu-block > .cfu-block--container > h2 {
   background-color: #2e3192;
   color: white;
