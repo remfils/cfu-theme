@@ -85,7 +85,16 @@
         {{ label }}
       {% endif %}
     </h2>
+
+    {% set video_preview = content.field_film_video | render %}
+    {% set image_preview = content.field_image | render %}
+
+    {% if node.hasField('field_film_video') and video_preview %}
+      {{ video_preview }}
+    {% elseif node.hasField('field_image') and image_preview %}
+      {{ image_preview }}
+    {% endif %}
     
-    {{ content }}
+    {{ content | without('field_film_video', 'field_image') }}
   </div>
 {% endblock %}
