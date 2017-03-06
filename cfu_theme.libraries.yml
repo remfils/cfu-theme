@@ -220,3 +220,8 @@ banners:
   css:
     component:
       components/asset-builds/css/banners.css: {}
+
+news-page:
+  css:
+    component:
+      components/asset-builds/css/news-page.css: {}
