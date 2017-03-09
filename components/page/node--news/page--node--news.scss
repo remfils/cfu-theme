@@ -1,0 +1,35 @@
+@import 'init';
+@import 'layout-3col/_layout-3col';
+@import "zen-grids";
+$zen-columns: 24;
+
+.layout-3col {
+  margin: 0 auto !important;
+}
+
+.node-news {
+  
+  @include zen-grid-container();
+  
+  &__sidebar {
+    @include zen-grid-item(1, 1);
+
+    font-weight: bold;
+    width: 180px;
+    text-align: right;
+  }
+
+  &__content {
+    @include zen-grid-item(16, 6);
+
+    > h2 {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+      
+      > a {
+        color: black;
+      }
+    }
+  }
+}
