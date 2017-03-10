@@ -230,6 +230,11 @@ page--node--news:
   css:
     component:
       components/asset-builds/css/page--node--news.css: {}
+  js:
+    components/asset-builds/js/page--node--news.js: {}
+  dependencies:
+    - core/jquery
+    - slick/slick
 
 page--node--page:
   css:
