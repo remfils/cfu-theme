@@ -1,0 +1,39 @@
+@import 'init';
+
+.news-search-form {
+  display: inline-block;
+
+  &__search_str {
+    float: left;
+  }
+
+  &__struct-list {
+    min-width: 300px;
+  }
+
+  .sf-menu a,
+  {
+    color: white;
+    text-decoration: none;
+  }
+
+  .sf-menu ul {
+    background-color: #2E3192;
+    color: white;
+  }
+
+  .sf-menu ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .sf-menu ul li:hover {
+    background-color: #2E3159;
+  }
+
+  &__submit {
+    float: left;
+  }
+}

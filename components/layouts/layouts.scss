@@ -1,5 +1,5 @@
 @import 'init';
-
+@import 'zen-grids';
 // Layouts
 //
 // The layout styling for major parts of the page that are included with the
@@ -12,6 +12,10 @@
 // The layout-swap isn't used in page.html.twig. You may wish to remove it to
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
+
+$zen-columns: 8;
+$zen-gutters: 1%;
+$zen-gutter-method: 'margin';
 
 h1.page-title {
   margin-bottom: 50px;  
@@ -49,6 +53,35 @@ h1.page-title,
 
   &--white {
     background-color: #fff;    
+  }
+  
+  &__title {
+    @include zen-grid-container();
+    min-height: 35px;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    &__text,
+    &__form {
+      background-color: #2E3192;
+      height: 40px;
+      max-height: 40px;
+    }
+
+    &__text {
+      @include zen-grid-item(1,1);
+
+      background-color: #2e3192;
+      color: white;
+      font-size: 14px;
+      line-height: 40px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &__form {
+      @include zen-grid-item(7,2);
+    }
   }
 }
 

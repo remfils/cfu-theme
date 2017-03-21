@@ -225,6 +225,7 @@ news-page:
   css:
     component:
       components/asset-builds/css/news-page.css: {}
+      components/asset-builds/css/cfu_news.css: {}
 
 page--node--news:
   css:
