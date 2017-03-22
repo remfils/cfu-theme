@@ -1,34 +1,41 @@
 @import 'init';
 
 @import "zen-grids";
-$zen-columns: 24;
 
+$zen-columns: 32;
+$zen-gutters: 1%;
+$zen-gutter-method: 'margin';
 
 .all-news {
   @include zen-grid-container();
+  margin-top: 40px;
   padding-bottom: 20px;
   
   &__date-field {
-    @include zen-grid-item(1, 1);
+    @include zen-grid-item(4, 1);
 
-    width: 180px;
+    /* width: 180px; */
+
+    padding-right: 10px;
     
     font-weight: bold;
     text-align: right;
   }
 
   &__image-field {
-    @include zen-grid-item(2, 4);
+    @include zen-grid-item(4, 4);
     > a {
       position: relative;
       top: 6px;
+      left: -2px;
     }
 
     text-align: center;
   }
 
   &__text {
-    @include zen-grid-item(24-6, 6);
+    @include zen-grid-item(32-5-4, 7);
+    padding-left: 10px;
   }
 
   &__text__title {
