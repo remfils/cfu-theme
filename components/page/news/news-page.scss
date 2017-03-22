@@ -6,9 +6,14 @@ $zen-columns: 32;
 $zen-gutters: 1%;
 $zen-gutter-method: 'margin';
 
+.view-display-id-news {
+  margin-top: 40px;
+}
+
 .all-news {
   @include zen-grid-container();
-  margin-top: 40px;
+
+  margin-left: 15px;
   padding-bottom: 20px;
   
   &__date-field {
