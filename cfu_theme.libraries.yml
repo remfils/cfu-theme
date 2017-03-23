@@ -221,6 +221,17 @@ banners:
     component:
       components/asset-builds/css/banners.css: {}
 
+news-block:
+  css:
+    component:
+      components/asset-builds/css/cfu_news__block.css: {}
+  dependencies:
+    - blazy/blazy
+    - blazy/grid
+    - blazy/ratio
+    - blazy/column
+    - blazy/media
+
 news-page:
   css:
     component:

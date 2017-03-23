@@ -1,0 +1,83 @@
+@import 'init';
+
+/* news block */
+
+.news-view {
+  $news-image-height: 257px;
+  $news-text-height: 180px;
+  $news-text-padding: 10px;
+  $gutter: 25px;
+  
+  color: white;
+  font-size: 16px;
+
+  .grid__content {
+    background-color: #2e3192;
+  }
+
+  .view-content {
+    height: $news-image-height + $news-text-height + 2*$news-text-padding + $gutter;
+    overflow: hidden;
+  }
+  
+  .views-field-created {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .views-field-body {
+    text-indent: 20px;
+    /* text-align: justify; */
+    padding: $news-text-padding;
+    line-height: 1.3;
+    min-height: $news-text-height;
+  }
+
+  .views-field-body p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .more-link {
+    text-align: right;
+    min-height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .more-link:after {
+    $image-res: 1210px / 1911px; // width / height
+    $block-width: 30px;
+    
+    content: ' ';
+    background-image: url(../images/more-news-arrow.png);
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: $block-width * $image-res;
+    width: $block-width;
+  }
+
+  .more-link.opened {
+    cursor: default;
+  }
+  
+  .more-link.opened:after {
+    display: none;
+  }
+
+  .more-link a {
+    opacity: 0;
+
+    transition: opacity 1s
+  }
+
+  .more-link.opened a {
+    opacity: 1;
+  }
+
+  
+}
+
