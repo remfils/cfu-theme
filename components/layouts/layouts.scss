@@ -33,6 +33,11 @@ h1.page-title,
   padding: 5px 15px 5px 15px;
 }
 
+h1.cfu-block__title__text > a {
+  color: white;
+  text-decoration: none;
+}
+
 .cfu-block {
   padding-left: 15px;
   padding-right: 15px;
@@ -58,7 +63,6 @@ h1.page-title,
   &__title {
     @include zen-grid-container();
     min-height: 35px;
-    margin-right: -15px;
 
     &__text,
     &__form {
@@ -97,6 +101,7 @@ h1.page-title,
 }
 
 .cfu-block__title {
+  padding-top: 15px;
   margin-bottom: 15px;
 }
 
