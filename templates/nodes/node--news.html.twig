@@ -58,6 +58,7 @@
  * @see template_preprocess_node()
  */
 #}
+{% set attributes = attributes.addClass('clearfix') %}
 {% set modifier_class = attributes.class %}
 {% set attributes = attributes.removeAttribute('class') %}
 
@@ -96,5 +97,7 @@
     {% endif %}
     
     {{ content | without('field_film_video', 'field_image') }}
+
+    {{title_suffix}}
   </div>
 {% endblock %}
