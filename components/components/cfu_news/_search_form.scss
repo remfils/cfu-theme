@@ -1,0 +1,82 @@
+.form-container {
+  position: relative;
+}
+
+.glyph {
+  background-size: cover;
+  content: '';
+  
+  &--search {
+    background-image: url(../../../images-source/search.png);
+    width: 16px;
+    height: 16px;
+  }
+
+  &--input-item {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+}
+
+.news-search-form {
+  display: inline-block;
+
+  &__container-search-str {
+    float: left;
+    margin-top: 7px;
+    display: inline;
+  }
+
+  &__search_str {
+    border: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 25px;
+    min-width: 300px;
+    outline: none;
+    outline-width: 0;
+    padding-left: 25px;
+  }
+
+  &__submit {
+    border-radius: 15px;
+    left: -20px;
+    height: 25px;
+    line-height: 25px;;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
+    top: 7px;
+  }
+
+  &__struct-list {
+    min-width: 300px;
+  }
+
+  .sf-menu a,
+  {
+    color: white;
+    text-decoration: none;
+  }
+
+  .sf-menu ul {
+    background-color: #2E3192;
+    color: white;
+  }
+
+  .sf-menu ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .sf-menu ul li:hover {
+    background-color: #2E3159;
+  }
+
+  &__submit {
+    float: left;
+  }
+}
