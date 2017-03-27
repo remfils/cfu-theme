@@ -26,11 +26,24 @@ h1.page-title,
   background-color: #2e3192;
   color: white;
   display: inline-block;
-  font-size: 14px;
-  line-height: 1;
   min-width: 180px;
-  margin: 15px 0;
-  padding: 5px 15px 5px 15px;
+
+  font-size: 14px;
+  line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+
+h1.page-title,
+.cfu-block > .cfu-block--container > h2 {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.cfu-block__title {
+  padding-top: 15px;
+  margin-bottom: 15px;
 }
 
 h1.cfu-block__title__text > a {
@@ -98,11 +111,6 @@ h1.cfu-block__title__text > a {
     background-color: #9e1f62;
     color: white;
   }
-}
-
-.cfu-block__title {
-  padding-top: 15px;
-  margin-bottom: 15px;
 }
 
 .second-level-page-container {
