@@ -151,14 +151,15 @@ options.gulpWatchOptions = {};
 // ################################
 // Load Gulp and tools we will use.
 // ################################
-var gulp      = require('gulp'),
-  $           = require('gulp-load-plugins')(),
-  browserSync = require('browser-sync').create(),
-  del         = require('del'),
-  // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
-  sass        = require('gulp-sass'),
-    kss         = require('kss'),
-    cache = require('gulp-cached');
+var gulp               = require('gulp'),
+  $                    = require('gulp-load-plugins')(),
+  browserSync          = require('browser-sync').create(),
+  del                  = require('del'),
+  // gulp-load         -plugins will report "undefined" error unless you load gulp-sass manually.
+  sass                 = require('gulp-sass'),
+  kss                  = require('kss'),
+  cache                = require('gulp-cached'),
+  sassPartialsImported = require('gulp-sass-partials-imported');
 
 // The default task.
 gulp.task('default', ['build']);
@@ -174,7 +175,7 @@ gulp.task('build', ['styles:production', 'styleguide', 'lint']);
 var sassFiles = [
   options.theme.components + '**/*.scss',
   // Do not open Sass partials as they will be included as needed.
-  '!' + options.theme.components + '**/_*.scss',
+  //'!' + options.theme.components + '**/_*.scss',
   // Chroma markup has its own gulp task.
   '!' + options.theme.components + 'style-guide/kss-example-chroma.scss'
 ];
@@ -183,6 +184,7 @@ gulp.task('styles', function () {
   return gulp.src(sassFiles)
     .pipe($.sourcemaps.init())
     .pipe(cache())
+    .pipe(sassPartialsImported(options.theme.components))
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.rename({dirname: ''}))
