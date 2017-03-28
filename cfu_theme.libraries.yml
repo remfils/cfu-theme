@@ -202,6 +202,7 @@ struct-carousel:
     components/asset-builds/js/struct-carousel.js: {}
   dependencies:
     - core/jquery
+    - slick/slick
 
 
 # anouncment-block:
