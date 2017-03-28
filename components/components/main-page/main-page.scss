@@ -9,7 +9,9 @@
   $zen-gutter-width: 10px;
   @include zen-grid-container;
 
-  height: 230px;
+  /* height: 230px; */
+
+  padding-bottom: 20px;
 
   .view-content {
     margin-left: -10px;
@@ -30,6 +32,14 @@
     text-align: center;
   }
 
+  .views-field-field-event-date:hover {
+    background-color: darken(#2e3192, 15%);
+  }
+
+  .views-field-field-event-date a {
+    text-decoration: none;
+  }
+
   .views-field-field-event-date .datetime {
     color: white;
     vertical-align: middle;
@@ -38,9 +48,7 @@
   .anouncment-msg {
     background-color: #fff;
     min-height: 157px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;;
+    padding: 10px;
 
     p {
       margin-top: 0;
