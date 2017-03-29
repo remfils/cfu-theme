@@ -33,16 +33,15 @@ h1.page-title,
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 h1.page-title,
 .cfu-block > .cfu-block--container > h2 {
   margin-bottom: 15px;
-  margin-top: 15px;
 }
 
 .cfu-block__title {
-  padding-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -71,6 +70,10 @@ h1.cfu-block__title__text > a {
 
   &--white {
     background-color: #fff;    
+  }
+
+  &--all-padding {
+    padding: 15px;
   }
   
   &__title {
@@ -101,6 +104,13 @@ h1.cfu-block__title__text > a {
   }
 }
 
+.cfu-block--all-padding [class*="block-grid-"] > .grid,
+.cfu-block--all-padding [class*="block-column-"] > .grid,
+.cfu-block--all-padding .item-list > [class*="block-column-"] > .grid {
+  padding-bottom: 0;
+  margin-bottom: 0px;
+}
+
 .cfu-btn {
   border: 0;
   border-radius: 5px;
@@ -119,4 +129,26 @@ h1.cfu-block__title__text > a {
   /* background-color: #fff; */
   /* padding-left: 15px; */
   /* padding-right: 15px; */
+}
+
+
+
+/* layout-2col-left-small */
+
+$zen-columns: 8;
+$zen-gutters: 1%;
+$zen-gutter-method: 'margin';
+
+.layout-2col {
+  &__row {
+    @include zen-grid-container();
+  }
+
+  &__small-col {
+    @include zen-grid-item(1,1);
+  }
+
+  &__large-col {
+    @include zen-grid-item(7,2);
+  }
 }
