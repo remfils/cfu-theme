@@ -253,3 +253,8 @@ page--node--page:
   css:
     component:
       components/asset-builds/css/page--node--page.css: {}
+
+cfu_anouncments:
+  css:
+    component:
+      components/asset-builds/css/cfu_anouncments.css: {}

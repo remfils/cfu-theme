@@ -1,0 +1,19 @@
+@import 'init';
+
+.cfu-row {
+  padding-bottom: 30px;
+  
+  &--date-col {
+    font-weight: bold;
+    text-align: right;
+    color: black;
+  }
+
+  &--link-black-col {
+    padding-right: 60px;
+  }
+
+  &--link-black-col a {
+    color: black;
+  }
+}
