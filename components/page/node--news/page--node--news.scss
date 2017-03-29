@@ -56,3 +56,44 @@ $zen-columns: 24;
   }
   
 }
+
+$zen-columns: 4;
+
+.recent-news-menu {
+  background-color: #fff;
+  margin-top: 24px;
+  padding: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+  &__title {
+    background-color: #2e3192;
+    color: white;
+    display: inline-block;
+    min-width: 180px;
+
+    font-size: 14px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0px;
+
+    
+  }
+  
+  &__row {
+    @include zen-grid-container();
+
+    margin-bottom: 15px;
+  }
+
+  &__image {
+    @include zen-grid-item(1, 1);
+    padding-top: 5px;
+  }
+
+  &__dsc {
+    @include zen-grid-item(3, 2);
+  }
+}
