@@ -11,7 +11,7 @@
 
     $item.addClass(struct_type);
 
-    // hack, because drupal cant link image to custom url
+    // todo: remove hack with block || hack, because drupal cant link image to custom url
     var struct_url = $item.find('.carousel-struct__url > a').attr('href');
 
     $item.find('.views-field-field-image a').attr('href', struct_url);
@@ -20,7 +20,7 @@
   // place arrows
   $views.append('<div class="slick__arrows"></div>');
   
-  $carousel = $views.find('.view-content');
+  var $carousel = $views.find('.view-content');
 
   function placeSlickArrows(e, slick, currentSlide) {
     var next_arrow = slick.$nextArrow[0];
@@ -42,6 +42,7 @@
     infinite: false,
     draggable: false
   });
+  
 
   // filter buttons
   var struct_array = [];

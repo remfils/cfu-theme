@@ -16,6 +16,9 @@
   .view-content {
     margin-left: -10px;
     margin-right: -10px;
+    
+    padding-right: 50px;
+    padding-left: 50px;
   }
   
   .anouncment-item {
@@ -54,6 +57,20 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 22px;
+    color: gray;
+  }
+
+  .slick-prev:before {
+    content: '<';
+  }
+
+  .slick-next:before {
+    content: '>';
   }
 }
 

@@ -121,6 +121,10 @@ h1.cfu-block__title__text > a {
     background-color: #9e1f62;
     color: white;
   }
+
+  &--magenta:hover {
+    background-color: darker(#9e1f62, 20%);
+  }
 }
 
 .second-level-page-container {
