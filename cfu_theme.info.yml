@@ -79,10 +79,7 @@ libraries:
   - cfu_theme/nav-menu
   - cfu_theme/navbar
   - cfu_theme/pager
-  - cfu_theme/news-carousel
-  - cfu_theme/struct-carousel
   #- cfu_theme/anouncment-block
-  - cfu_theme/main-page
   - cfu_theme/banners
 
 
