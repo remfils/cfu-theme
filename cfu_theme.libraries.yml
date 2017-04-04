@@ -198,12 +198,6 @@ struct-carousel:
   css:
     component:
       components/asset-builds/css/struct-carousel.css: {}
-  js:
-    components/asset-builds/js/struct-carousel.js: {}
-  dependencies:
-    - core/jquery
-    - slick/slick
-
 
 # anouncment-block:
 #   css:
