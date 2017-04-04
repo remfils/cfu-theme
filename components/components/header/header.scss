@@ -188,3 +188,44 @@ $logo_width: 202px;
     height: 40px;
   }
 }
+
+.block-superfishmain {
+  .menuparent ul {
+    background-color: #2E3192;
+  }
+}
+
+.sf-menu--cfu {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  ul {
+    background-color: #2E3192;
+    color: white;
+  }
+
+  ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  ul li:hover {
+    background-color: #2E3159;
+  }
+}
+
+.sf-menu--cfu--magenta {
+  @extend .sf-menu--cfu;
+
+  ul {
+    background-color: #a01f62;
+  }
+
+  ul li:hover {
+    background-color: darken(#a01f62, 10%);
+  }
+}

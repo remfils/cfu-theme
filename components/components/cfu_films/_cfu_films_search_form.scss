@@ -1,25 +1,6 @@
-.form-container {
-  position: relative;
-}
+@import 'init';
 
-.glyph {
-  background-size: cover;
-  content: '';
-  
-  &--search {
-    background-image: url(../../../images-source/search.png);
-    width: 16px;
-    height: 16px;
-  }
-
-  &--input-item {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-  }
-}
-
-.news-search-form {
+.films-search-form {
   display: inline-block;
 
   &__container-search-str {

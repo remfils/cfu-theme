@@ -86,6 +86,10 @@ h1.cfu-block__title__text > a {
       color: white;
       height: 40px;
       max-height: 40px;
+
+      &--magenta {
+        background-color: #a01f62;
+      }
     }
 
     &__text {
@@ -96,6 +100,10 @@ h1.cfu-block__title__text > a {
       margin-top: 0;
       margin-bottom: 0;
       padding-left: 15px;
+
+      &--magenta {
+        background-color: #a01f62;
+      }
     }
 
     &__form {
@@ -123,7 +131,26 @@ h1.cfu-block__title__text > a {
   }
 
   &--magenta:hover {
-    background-color: darker(#9e1f62, 20%);
+    background-color: lighten(#9e1f62, 10%);
+    
+  }
+
+  &--magenta:active {
+    background-color: darken(#9e1f62, 10%);
+  }
+
+
+  &--blue {
+    background-color: #2E3192;
+    color: white;
+  }
+
+  &--blue:hover {
+    background-color: lighten(#2E3192, 10%);
+  }
+
+  &--blue:active {
+    background-color: darken(#2E3192, 10%);
   }
 }
 

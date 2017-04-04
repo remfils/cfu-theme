@@ -269,3 +269,31 @@ textarea {
   // Remove the default vertical scrollbar in IE.
   overflow: auto;
 }
+
+
+.cfu-input {
+  border: 0;
+  border-radius: 6px;
+  font-size: 16px;
+  height: 25px;
+  padding-left: 25px;
+  outline: none;
+  outline-width: 0;
+}
+
+.cfu-submit {
+  border-radius: 8px;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.cfu-submit.cfu-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+}

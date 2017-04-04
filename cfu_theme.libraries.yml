@@ -252,3 +252,13 @@ cfu_anouncments:
   css:
     component:
       components/asset-builds/css/cfu_anouncments.css: {}
+
+cfu_films:
+  css:
+    component:
+      components/asset-builds/css/cfu_films.css: {}
+
+cfu_films__block:
+  css:
+    component:
+      components/asset-builds/css/cfu_films__block.css: {}
