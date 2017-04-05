@@ -98,9 +98,11 @@
       </div>
 
       <div class="cfu-block cfu-block--container cfu-block--white cfu-block--overflow cfu-block--all-padding">
-        {{ page.title }}
-        {{ page.help }}
-        {{ page.content }}
+        {% block page_title %}
+          {{ page.title }}
+          {{ page.help }}
+          {{ page.content }}
+        {% endblock %}
       </div>
 
     </main>
