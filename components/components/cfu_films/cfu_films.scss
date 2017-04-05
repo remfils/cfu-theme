@@ -1,2 +1,19 @@
 @import 'init';
 @import 'cfu_films_search_form';
+
+.film-teaser {
+  &__title {
+    text-decoration: underline;
+    font-weight: bold;
+
+    > a {
+      color: black;
+    }
+  }
+
+  &__body {
+    p {
+      text-indent: 0;
+    }
+  }
+}
