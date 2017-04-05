@@ -10,51 +10,11 @@ $zen-gutter-method: 'margin';
   margin-top: 40px;
 }
 
-.all-news {
-  @include zen-grid-container();
-
-  margin-left: 15px;
-  padding-bottom: 20px;
-  
-  &__date-field {
-    @include zen-grid-item(4, 1);
-
-    /* width: 180px; */
-
-    padding-right: 10px;
-    
-    font-weight: bold;
-    text-align: right;
-  }
-
-  &__image-field {
-    @include zen-grid-item(4, 4);
-    > a {
-      position: relative;
-      top: 6px;
-      left: -2px;
-    }
-
-    text-align: center;
-  }
-
-  &__text {
-    @include zen-grid-item(32-5-4, 7);
-    padding-left: 10px;
-  }
-
-  &__text__title {
+.news-item-teaser {
+  &__title {
     > a {
       color: black;
       font-weight: bold;
     }
-  }
-
-  &__text__body > p:first-child {
-    margin-top: 0;
-  }
-
-  :after {
-    @include zen-new-row();
   }
 }

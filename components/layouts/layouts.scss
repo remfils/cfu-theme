@@ -12,6 +12,7 @@
 // The layout-swap isn't used in page.html.twig. You may wish to remove it to
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
+@import 'layout-3col-teasers/layout-3col-teasers';
 
 $zen-columns: 8;
 $zen-gutters: 1%;

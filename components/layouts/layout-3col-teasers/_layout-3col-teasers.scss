@@ -1,0 +1,41 @@
+@import 'init';
+@import "zen-grids";
+
+$zen-columns: 32;
+$zen-gutters: 1%;
+$zen-gutter-method: 'margin';
+
+.layout-3col-teasers {
+
+  &__row {
+    @include zen-grid-container();
+
+    padding-bottom: 20px;
+  }
+  
+  &__date-col {
+    @include zen-grid-item(4, 1);
+
+    /* padding-right: 10px; */
+    
+    font-weight: bold;
+    text-align: right;
+  }
+
+  &__image-col {
+    @include zen-grid-item(3, 5);
+
+    text-align: left;
+
+    img {
+      position: relative;
+      top: 5px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content-col {
+    @include zen-grid-item(32-5-2, 8);
+  }
+}
