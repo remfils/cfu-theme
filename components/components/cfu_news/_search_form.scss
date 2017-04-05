@@ -22,6 +22,26 @@
 .news-search-form {
   display: inline-block;
 
+  .active {
+    background-color: darken(#2e3192, 10%);
+  }
+
+  &__date-title {
+    min-width: 170px;
+  }
+
+  &__struct-title {
+    min-width: 250px;
+  }
+
+  &__struct-list {
+    min-width: 300px;
+  }
+
+  &__content-type-title {
+    min-width: 200px;
+  }
+
   &__container-search-str {
     float: left;
     margin-top: 7px;
@@ -38,11 +58,16 @@
     top: 7px;
   }
 
-  &__struct-list {
-    min-width: 300px;
-  }
-
   &__submit {
     float: left;
   }
+}
+
+li.news-search-form__date-title > a,
+li.news-search-form__struct-title > a,
+li.news-search-form__content-type-title > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  line-height: 40px;
 }
