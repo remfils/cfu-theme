@@ -211,6 +211,12 @@ $logo_width: 202px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  ul li > span {
+    width: 100%;
+    display: inline-block;
   }
 
   ul li:hover {
@@ -228,4 +234,15 @@ $logo_width: 202px;
   ul li:hover {
     background-color: darken(#a01f62, 10%);
   }
+}
+
+
+.sf-with-ul--arrowed:after {
+  content: "►";
+
+  right: 10px;
+  line-height: 1;
+  position: absolute;
+  text-indent: 0;
+  top: 2px;
 }
