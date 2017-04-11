@@ -120,41 +120,6 @@ h1.cfu-block__title__text > a {
   margin-bottom: 0px;
 }
 
-.cfu-btn {
-  border: 0;
-  border-radius: 5px;
-  outline: 0;
-  padding: 5px 15px;
-  
-  &--magenta {
-    background-color: #9e1f62;
-    color: white;
-  }
-
-  &--magenta:hover {
-    background-color: lighten(#9e1f62, 10%);
-    
-  }
-
-  &--magenta:active {
-    background-color: darken(#9e1f62, 10%);
-  }
-
-
-  &--blue {
-    background-color: #2E3192;
-    color: white;
-  }
-
-  &--blue:hover {
-    background-color: lighten(#2E3192, 10%);
-  }
-
-  &--blue:active {
-    background-color: darken(#2E3192, 10%);
-  }
-}
-
 .second-level-page-container {
   /* max-width: 1600px; */
   /* margin: 0 auto; */
