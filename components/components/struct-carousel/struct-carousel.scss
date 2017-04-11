@@ -126,6 +126,11 @@ $zen-gutter-width: 0;
   &__btn.struct_тo {
     @include zen-grid-item(1, 3);
   }
+  /* fix: removes extra space for right panel @bugs/front-struct_carousel-extra_space.png */
+  &__btn.struct_тo {
+    position: relative;
+    left: -1px;
+  }
 
   .active.struct_vpo {
     background-color: darken($vpo-color, 25);
