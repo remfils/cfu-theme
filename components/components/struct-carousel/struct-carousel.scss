@@ -94,8 +94,11 @@ $zen-gutter-width: 0;
     cursor: pointer;
     display: none;
     position: absolute;
-    top: -40px;
+    top: 50px;
     left: 200px;
+    right: 0;
+    color: black;
+    text-align: right;
 
     &--active {
       display: block;
