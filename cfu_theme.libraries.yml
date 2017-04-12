@@ -248,10 +248,10 @@ page--node--page:
     component:
       components/asset-builds/css/page--node--page.css: {}
 
-cfu_anouncments:
+cfu_announcements:
   css:
     component:
-      components/asset-builds/css/cfu_anouncments.css: {}
+      components/asset-builds/css/cfu_announcements.css: {}
 
 cfu_films:
   css:
