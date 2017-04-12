@@ -79,6 +79,12 @@ $logo_width: 202px;
     }
   }
 
+  .site-logo img {
+    height: 162px;
+    bottom: 5px;
+    position: relative;
+  }
+
   // Logo image.
   &__logo-image {
     vertical-align: bottom;
@@ -185,6 +191,7 @@ $logo_width: 202px;
   }
 
   .site-logo img {
+    bottom: 0;
     height: 40px;
   }
 }
