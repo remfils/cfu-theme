@@ -37,6 +37,11 @@ h1.page-title,
   padding-right: 15px;
 }
 
+.cfu-block > .cfu-block--container > h2 > a {
+  color: white;
+  text-decoration: none;
+}
+
 h1.page-title,
 .cfu-block > .cfu-block--container > h2 {
   margin-bottom: 15px;
@@ -147,5 +152,35 @@ $zen-gutter-method: 'margin';
 
   &__large-col {
     @include zen-grid-item(7,2);
+  }
+}
+
+.cfu-row {
+  padding-bottom: 30px;
+  
+  &--date-col {
+    font-weight: bold;
+    text-align: right;
+    color: black;
+  }
+
+  &--link-black-col {
+    padding-right: 60px;
+  }
+
+  &--link-black-col a {
+    color: black;
+  }
+
+  &--shadow-highlight {
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    -webkit-box-shadow: -2px 4px 4px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -2px 4px 4px 0px rgba(0,0,0,0.2);
+    box-shadow: -2px 4px 4px 0px rgba(0,0,0,0.2);
+
+    margin-bottom: 15px;
   }
 }
