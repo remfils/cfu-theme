@@ -17,12 +17,42 @@
   &__list {
     margin: 0;
     padding: 0;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
+  $breadcrumb-height: 25px;
+  $breadcrumb-arrow-width: 17px;
+
   &__item {
-    display: inline;
+    display: inline-block;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-left: 5px;
+    font-style: italic;
+    height: $breadcrumb-height;
+    background-color: white;
+    position: relative;
+    margin-right: $breadcrumb-arrow-width;
+    border-bottom: 1px solid #CDCDCD;
+  }
+
+  &__item > a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__item:after {
+    content: '';
+    display: block;
+    height: $breadcrumb-height;
+    width: $breadcrumb-arrow-width;
+
+    position: absolute;
+    right: - $breadcrumb-arrow-width;
+    top: 0px;
+    background-image: url(../../../images-source/breadcrumbs-arrow-ending--cfu-lib.png);
   }
 }
