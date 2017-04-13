@@ -23,7 +23,19 @@
   display: inline-block;
 
   .active {
-    background-color: darken(#2e3192, 10%);
+    background-color: #a01f62;
+  }
+
+  &__filter-header {
+    float: left;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 10px;
+    
+    > strong {
+      line-height: 40px;
+      vertical-align: middle;
+    }
   }
 
   &__date-title {
@@ -43,19 +55,21 @@
   }
 
   &__container-search-str {
-    float: left;
+    float: right;
     margin-top: 7px;
     margin-left: 10px;
     display: inline;
+    padding-right: 15px;
+    position: relative;
   }
 
   &__search_str {
-    min-width: 300px;
+    min-width: 500px;
   }
 
   &__submit {
-    left: -20px;
-    position: relative;
+    right: 15px;
+    position: absolute;
     top: 7px;
   }
 
