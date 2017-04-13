@@ -15,8 +15,12 @@
   }
 
   &__list {
+    background-color: white;
+    border: 1px solid #CDCDCD;
     margin: 0;
-    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;    
   }
 
   &__item {
