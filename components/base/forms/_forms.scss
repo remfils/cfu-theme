@@ -303,6 +303,8 @@ textarea {
   border-radius: 5px;
   outline: 0;
   padding: 5px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
   
   &--magenta {
     background-color: #9e1f62;
@@ -316,6 +318,11 @@ textarea {
 
   &--magenta:active {
     background-color: lighten(#9e1f62, 10%);
+  }
+
+  &--magenta[disabled] {
+    background-color: #873661;
+    color: gray;
   }
 
 
@@ -332,8 +339,10 @@ textarea {
   &--blue:active {
     background-color: lighten(#2E3192, 10%);
     color: white;
+  }
 
-
-    
+  &--blue[disabled] {
+    background-color: #3C3D5D;
+    color: gray;    
   }
 }
