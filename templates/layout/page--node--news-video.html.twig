@@ -90,17 +90,18 @@
 
     <main class="{{ content_class }}" role="main">
 
-      <div class="cfu-block cfu-block--container">
-
+      <div>
         {{ page.highlighted }}
         {{ page.breadcrumb }}
         <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>{# link target is in html.html.twig #}
       </div>
 
-      <div class="cfu-block cfu-block--container cfu-block--white cfu-block--overflow cfu-block--all-padding cfu-block--bordered">
-        {{ page.title }}
-        {{ page.help }}
-        {{ page.content }}
+      <div>
+        <div class="cfu-block cfu-block--white cfu-block--overflow cfu-block--all-padding cfu-block--bordered">
+          {{ page.title }}
+          {{ page.help }}
+          {{ page.content }}
+        </div>
       </div>
 
     </main>
