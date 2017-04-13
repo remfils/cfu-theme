@@ -81,6 +81,10 @@ h1.cfu-block__title__text > a {
   &--all-padding {
     padding: 15px;
   }
+
+  &--bordered {
+    border: 1px solid #CDCDCD;
+  }
   
   &__title {
     @include zen-grid-container();
