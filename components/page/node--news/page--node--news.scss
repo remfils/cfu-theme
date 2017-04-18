@@ -13,14 +13,13 @@ $zen-columns: 24;
   
   &__sidebar {
     @include zen-grid-item(1, 1);
-
     font-weight: bold;
     width: 180px;
     text-align: right;
   }
 
   &__time-field {
-    margin-bottom: 47px; // to allign with image in news page
+    margin-bottom: 25px; // to allign with image in news page
   }
 
   &__content {
@@ -28,6 +27,7 @@ $zen-columns: 24;
 
     > h2 {
       margin: 0;
+      margin-bottom: 30px;
       line-height: 1.5;
       font-size: 14px;
       
@@ -57,7 +57,6 @@ $zen-columns: 24;
   }
 
   &__display-case {
-    margin-top: 30px;
     margin-bottom: 15px;
 
     > img {

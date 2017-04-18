@@ -64,7 +64,7 @@
 {% block heading %}
   {{ title_prefix }}
   {% if not page %}
-    {% set heading = label %}
+    {% set heading = 'Все анонсы' %}
     {% set headingAttributes = title_attributes %}
     {{ parent() }}
   {% endif %}
@@ -84,10 +84,29 @@
 
 {% block content %}
 
-  {% set field_date = content.field_event_date %}
+  <div class="layout-2col-news__row">
 
-  <strong>{{ field_date['#title'] }}:</strong> {{ field_date[0] }}
+    <div class="layout-2col-news__sidebar">
+      {{addtoanybuttons}}
+    </div>
 
-  {{ content.body[0] }}
+    <div class="layout-2col-news__content">
+
+      <h2>
+        {% if url %}
+          <a href="{{ url }}">{{ label }}</a>
+        {% else %}
+          {{ label }}
+        {% endif %}
+      </h2>
+      
+      {% set field_date = content.field_event_date %}
+
+      <strong>{{ field_date['#title'] }}:</strong> {{ field_date[0] }}
+
+      {{ content.body[0] }}
+    </div>
+    
+  </div>
   
 {% endblock %}

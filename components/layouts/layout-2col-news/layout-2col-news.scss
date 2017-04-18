@@ -1,0 +1,31 @@
+@import 'init';
+
+$zen-columns: 24;
+
+.layout-2col-news {
+  &__row {
+    @include zen-grid-container();
+  }
+
+  &__sidebar {
+    @include zen-grid-item(1, 1);
+    font-weight: bold;
+    width: 180px;
+    text-align: right;
+  }
+
+  &__content {
+    @include zen-grid-item(16, 6);
+
+    > h2 {
+      margin: 0;
+      margin-bottom: 30px;
+      line-height: 1.5;
+      font-size: 14px;
+      
+      > a {
+        color: black;
+      }
+    }
+  }
+}

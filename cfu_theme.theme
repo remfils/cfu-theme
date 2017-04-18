@@ -137,6 +137,21 @@ function cfu_theme_preprocess_node_news(&$variables, $hook)
         }
     }
 }
+
+function cfu_theme_preprocess_node_announcement(&$variables, $hook)
+{
+    $block = \Drupal::entityManager()->getStorage('block')->load('addtoanybuttons');
+
+    if (!empty($block)) {
+        $content = \Drupal::entityManager()
+                 ->getViewBuilder('block')
+                 ->view($block);
+
+        if ($content) {
+            $variables['addtoanybuttons'] = $content;
+        }
+    }
+}
 // */
 
 /**
