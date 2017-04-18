@@ -110,16 +110,32 @@ function cfu_theme_preprocess_block(&$variables, $hook) {
  * @param string $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function cfu_theme_preprocess_node(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
 
+function cfu_theme_preprocess_node(&$variables, $hook) {
   // Optionally, run node-type-specific preprocess functions, like
   // cfu_theme_preprocess_node_page() or cfu_theme_preprocess_node_story().
-  $function = __FUNCTION__ . '_' . $variables['node']->type;
+
+    
+  $function = __FUNCTION__ . '_' . $variables['node']->type->getString();
+  
   if (function_exists($function)) {
     $function($variables, $hook);
   }
+}
+
+function cfu_theme_preprocess_node_news(&$variables, $hook)
+{
+    $block = \Drupal::entityManager()->getStorage('block')->load('addtoanybuttons');
+
+    if (!empty($block)) {
+        $content = \Drupal::entityManager()
+                 ->getViewBuilder('block')
+                 ->view($block);
+
+        if ($content) {
+            $variables['addtoanybuttons'] = $content;
+        }
+    }
 }
 // */
 

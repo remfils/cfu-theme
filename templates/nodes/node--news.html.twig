@@ -74,7 +74,11 @@
 {% block content %}
 
   <div class="node-news__sidebar">
-    {{node.getCreatedTime() | date("d-m-Y")}}
+    <div class="node-news__time-field">
+      {{node.getCreatedTime() | date("d-m-Y")}}
+    </div>
+
+    {{ addtoanybuttons }}
   </div>
 
   <div class="node-news__content">
