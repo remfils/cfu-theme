@@ -1,9 +1,9 @@
 (function ($) {
   var $gallery_container = $('.field--name-field-image-gallery > .field__items');
 
-  var msnry = new Masonry($gallery_container, {
+  var masonry = new Masonry($gallery_container, {
     itemSelector: '.field__items',
-    columnWidth: 100
+    columnWidth: '.field--name-field-image-gallery .field__items'
   });
 
   $('p img.align-right').unwrap();
