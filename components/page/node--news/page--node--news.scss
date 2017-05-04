@@ -37,9 +37,13 @@ $zen-columns: 24;
     }
 
     .field--name-field-image-gallery {
+      .field__items {
+        font-size: 0;
+      }
+      
       .field__item {
         display: inline-block;
-        width: 33.3%;
+        width: 214px;
 
         img {
           width: 100%;
