@@ -27,7 +27,7 @@ h1.page-title,
 .cfu-block > .cfu-block--container > h2 {
   background-color: #2e3192;
   color: white;
-  display: inline-block;
+  display: block;
   min-width: 180px;
 
   font-size: 14px;
@@ -36,6 +36,10 @@ h1.page-title,
   margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include respond-to(l) {
+    display: inline-block;
+  }
 }
 
 h1.page-title > a,
@@ -105,7 +109,7 @@ h1.cfu-block__title__text > a {
     }
 
     &__text {
-      @include zen-grid-item(1,1);
+      @include zen-grid-item(8,1);
       
       font-size: 14px;
       line-height: 40px;
@@ -119,7 +123,37 @@ h1.cfu-block__title__text > a {
     }
 
     &__form {
-      @include zen-grid-item(7,2);
+      display: none;
+    }
+  }
+
+  @include respond-to(l) {
+    &__title {
+
+      &__text,
+      &__form {
+        @include zen-grid-item(2,1);
+      }
+
+      &__form {
+        display: block;
+        @include zen-grid-item(6,3);
+      }
+    }
+  }
+
+  @include respond-to(xxl) {
+    &__title {
+
+      &__text,
+      &__form {
+        @include zen-grid-item(1,1);
+      }
+
+      &__form {
+        display: block;
+        @include zen-grid-item(7,2);
+      }
     }
   }
 }
@@ -128,7 +162,6 @@ h1.cfu-block__title__text > a {
 .cfu-block--all-padding [class*="block-column-"] > .grid,
 .cfu-block--all-padding .item-list > [class*="block-column-"] > .grid {
   padding-bottom: 0;
-  margin-bottom: 0px;
 }
 
 .second-level-page-container {

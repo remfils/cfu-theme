@@ -24,7 +24,6 @@ $logo_width: 202px;
 %header {
   background-color: #2e3192;
   color: white;
-  min-height: 130px;
   /* position: fixed; */
   transition: height 0.5s;
   top: 32px;
@@ -33,7 +32,7 @@ $logo_width: 202px;
   z-index: 9999;
 
   .cfu-block--container {
-    min-height: 130px;
+    min-height: 70px;
   }
 
   a {
@@ -56,23 +55,15 @@ $logo_width: 202px;
     }
 
     .site-name {
-      left: $logo_width + 20;
-      position: absolute;
-      top: 60px;
-      width: 1000px;
-
-      a {
-        font-family: Arial;
-        font-weight: bold;
-        font-size: 25px;
-      }
+      display: none;
     }
   }
 
   .header-block--vernadky-image {
+    bottom: 0px;
+    display: none;
     position: absolute;
     right: 0;
-    bottom: 0px;
 
     img {
       height: 155px;
@@ -80,8 +71,8 @@ $logo_width: 202px;
   }
 
   .site-logo img {
-    height: 162px;
     bottom: 5px;
+    height: 60px;
     position: relative;
   }
 
@@ -97,6 +88,7 @@ $logo_width: 202px;
 
   // The name of the website.
   &__site-name {
+    display: none;
     margin: 0;
   }
 
@@ -163,6 +155,43 @@ $logo_width: 202px;
 
     .menuparent ul {
       background-color: #2E3192;
+    }
+  }
+
+  @include respond-to(s) {
+    min-height: 130px;
+
+    .block-system-branding-block {
+      .site-name {
+        display: block;
+        left: $logo_width + 20;
+        position: absolute;
+        top: 60px;
+        width: 1000px;
+
+        a {
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 25px;
+        }        
+      }
+    }
+
+    &__site-name {
+      display: block;
+    }
+
+    .cfu-block--container {
+      min-height: 130px;
+    }
+    
+    .site-logo img {
+      height: 162px;
+      bottom: 5px;
+    }
+
+    .header-block--vernadky-image {
+      display: block;
     }
   }
 }

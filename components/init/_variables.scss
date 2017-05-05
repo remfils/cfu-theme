@@ -128,6 +128,9 @@ $rem-fallback:      false;
 @include add-breakpoint(xl,   (999px, 'no-query' true));
 @include add-breakpoint(xxl,  (1111px));
 @include add-breakpoint(xxxl, (1222px));
+@include add-breakpoint(xxxl-form-filters, (1600px));
+
+@include add-breakpoint(xs-grid, (641px));
 
 // Output media queries where the above px are converted to ems.
 // @include breakpoint-set('to ems', true);

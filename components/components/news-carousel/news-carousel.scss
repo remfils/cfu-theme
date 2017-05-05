@@ -12,16 +12,15 @@
   }
 
   &__controll-panel {
-    background-color: rgba(46,49,146, 0.9);
-    position: absolute;
+    background-color: rgba(46,49,146, 1);
+    padding-top: 20px;
     min-height: 120px;
-    min-width: 600px;
-    bottom: 0;
-    left: 15px;
 
     h3 {
       color: white;
       padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 0px;
     }
 
     .slick__arrow {
@@ -46,6 +45,7 @@
     }
 
     .slick-dots {
+      position: relative;
       bottom: 0;
       left: 70px;
       text-align: left;
@@ -55,14 +55,33 @@
         color: white;
       }
 
-      li.slick-active button::before {
+      li.slick-active button:before {
         color: white;
         opacity: 1;
       }
 
-      li button::before {
+      li button:before {
         color: white;
         opacity: 0.5;
+      }
+    }
+  }
+
+  @include respond-to(m) {
+    &__controll-panel {
+      background-color: rgba(46,49,146, 0.9);
+      position: absolute;
+      min-height: 120px;
+      min-width: 600px;
+      bottom: 0;
+      left: 15px;
+
+      h3 {
+        margin-top: 1.5rem;
+      }
+
+      .slick-dots {
+        position: absolute;
       }
     }
   }

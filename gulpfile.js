@@ -138,7 +138,8 @@ options.eslint = {
     options.theme.js + '**/*.js',
     '!' + options.theme.js + '**/*.min.js',
     options.theme.components + '**/*.js',
-    '!' + options.theme.build + '**/*.js'
+    '!' + options.theme.build + '**/*.js',
+    '!' + options.theme.components + '**/.#*.js'
   ]
 };
 
@@ -278,7 +279,8 @@ gulp.task('lint:sass-with-fail', function () {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
+//gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
+gulp.task('watch', ['browser-sync', 'watch:js']);
 
 gulp.task('browser-sync', ['watch:css', 'watch:js'], function () {
   if (!options.drupalURL) {
@@ -291,7 +293,11 @@ gulp.task('browser-sync', ['watch:css', 'watch:js'], function () {
 });
 
 gulp.task('watch:css', ['clean:css', 'styles'], function () {
-  return gulp.watch(options.theme.components + '**/*.scss', options.gulpWatchOptions, ['styles']);
+  return gulp.watch(
+    [
+      options.theme.components + '**/*.scss',
+      '!.#*'
+    ],options.gulpWatchOptions, ['styles']);
 });
 
 gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function () {

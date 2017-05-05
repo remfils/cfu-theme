@@ -8,8 +8,6 @@
 }
 
 .films-search-form {
-  display: inline-block;
-
   .active {
     background-color: darken(#a01f62, 10%);
   }
@@ -35,7 +33,7 @@
   }
 
   &__struct-list {
-    min-width: 300px;
+    min-width: 150px;
   }
 
   &__container-search-str {
@@ -57,6 +55,16 @@
   }
 }
 
+.films-search-form__date-dropdown,
+.films-search-form__struct-dropdown,
+.films-search-form__filter-header {
+  display: none;
+
+  @include respond-to(xxxl-form-filters) {
+    display: block;
+  }
+}
+
 li.films-search-form__date-title > a,
 li.films-search-form__struct-title > a,
 li.films-search-form__content-type-title > a {
@@ -64,4 +72,8 @@ li.films-search-form__content-type-title > a {
   padding-bottom: 0px;
 
   line-height: 40px;
+}
+
+.cfu-block--all-padding [class*="block-grid-"] > .grid {
+  margin: 0 0 1rem;
 }

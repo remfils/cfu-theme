@@ -20,8 +20,6 @@
 }
 
 .news-search-form {
-  display: inline-block;
-
   .active {
     background-color: #a01f62;
   }
@@ -74,6 +72,18 @@
 
   &__submit {
     float: left;
+  }
+
+}
+
+.news-search-form__date-dropdown,
+.news-search-form__struct-dropdown,
+.news-search-form__content-type-dropdown,
+.news-search-form__filter-header {
+  display: none;
+
+  @include respond-to(xxxl-form-filters) {
+    display: block;
   }
 }
 
