@@ -296,7 +296,8 @@ gulp.task('watch:css', ['clean:css', 'styles'], function () {
   return gulp.watch(
     [
       options.theme.components + '**/*.scss',
-      '!.#*'
+      options.theme.components + '**/*.twig',
+      '!' + options.theme.components + '**/.*'
     ],options.gulpWatchOptions, ['styles']);
 });
 
