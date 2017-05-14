@@ -9,10 +9,15 @@
 $logo_width: 202px;
 
 .control-header {
+  display: none;
   min-height: 30px;
 
   .cfu-block--container {
     padding-right: 100px;
+  }
+
+  @include respond-to(m) {
+    display: block;
   }
 }
 
@@ -126,40 +131,70 @@ $logo_width: 202px;
     clear: both;
   }
 
-  .block-superfishmain {
-    position: absolute;
-    bottom: 0;
-    left: $logo_width;
-    width: auto;
+  .main-menu {
+    &__content {
+      bottom: 0;
+      display: none;
+      left: $logo_width;
+      position: absolute;
+      width: auto;
 
-    a {
-      transition: background-color 0.5s;
-    }
-    
-    a:hover,
-    .sfHover > a {
-      background-color: #2E3159;
+      a {
+        transition: background-color 0.5s;
+      }
+      
+      a:hover,
+      .sfHover > a {
+        background-color: #2E3159;
+      }
+
+      ul.sf-menu .sf-sub-indicator {
+        height: 20px;
+      }
+
+      ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
+        top: 3em;
+      }
+
+      li a {
+        color: white;
+      }
+
+      .menuparent ul {
+        background-color: #2E3192;
+      }
     }
 
-    ul.sf-menu .sf-sub-indicator {
-      height: 20px;
-    }
+    &__mobile-btn {
+      $menu-bar-width: 30px;
+      
+      background-image: url(../../../images-source/three-lines.png);
+      background-size: 100%;
+      cursor: pointer;
+      display: block;
+      height: 626px / 640px * $menu-bar-width;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      width: $menu-bar-width;
+      z-index: 9999;
 
-    ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
-      top: 3em;
-    }
-
-    li a {
-      color: white;
-    }
-
-    .menuparent ul {
-      background-color: #2E3192;
+      @include respond-to(xxxl) {
+        display: none;
+      }
     }
   }
 
-  @include respond-to(s) {
-    min-height: 130px;
+  @include respond-to(xxxl) {
+    .main-menu__content {
+      display: block;
+
+      
+    }
+
+    .header-block--vernadky-image {
+      display: block;
+    }
 
     .block-system-branding-block {
       .site-name {
@@ -176,26 +211,25 @@ $logo_width: 202px;
         }        
       }
     }
-
-    &__site-name {
-      display: block;
-    }
-
-    .cfu-block--container {
-      min-height: 130px;
-    }
     
-    .site-logo img {
-      height: 162px;
-      bottom: 5px;
-    }
+    @include respond-to(s) {
+      min-height: 130px;
 
-    .header-block--vernadky-image {
-      display: block;
+      &__site-name {
+        display: block;
+      }
+
+      .cfu-block--container {
+        min-height: 130px;
+      }
+      
+      .site-logo img {
+        height: 162px;
+        bottom: 5px;
+      }
     }
   }
 }
-
 
 .header.fixed {
   position: fixed;
@@ -225,7 +259,7 @@ $logo_width: 202px;
   }
 }
 
-.block-superfishmain {
+.main-menu__content {
   .menuparent ul {
     background-color: #2E3192;
   }

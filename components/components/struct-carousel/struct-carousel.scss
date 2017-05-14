@@ -5,6 +5,18 @@ $vpo-color: #a01f62;
 $spo-color: #2e3192;
 $no-color: #ffc208;
 
+.block-cfu-struct-main-page-block {
+  @media (max-width: 1400px) {
+    .cfu-block__title__text {
+      width: 100%;
+    }
+
+    .struct-filter__btn {
+      display: none;
+    }
+  }
+}
+
 .view-carousel-struct-units {
   position: relative;
   padding-left: 50px;

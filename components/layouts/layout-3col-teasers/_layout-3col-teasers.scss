@@ -14,7 +14,8 @@ $zen-gutter-method: 'margin';
   }
   
   &__date-col {
-    @include zen-grid-item(4, 1);
+    @include zen-new-row();
+    @include zen-grid-item(30, 2);
 
     /* padding-right: 10px; */
     
@@ -23,7 +24,8 @@ $zen-gutter-method: 'margin';
   }
 
   &__image-col {
-    @include zen-grid-item(3, 5);
+    @include zen-new-row();
+    @include zen-grid-item(30, 2);
 
     text-align: left;
 
@@ -36,6 +38,53 @@ $zen-gutter-method: 'margin';
   }
 
   &__content-col {
-    @include zen-grid-item(32-5-2, 8);
+    @include zen-new-row();
+    @include zen-grid-item(30, 2);
+  }
+
+  @include respond-to(xxs) {
+    &__date-col {
+      @include zen-new-row(none);
+      @include zen-grid-item(16, 17);
+    }
+
+    &__image-col {
+      @include zen-new-row(none);
+      @include zen-grid-item(16, 2);
+
+      img {
+        position: relative;
+        top: 5px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content-col {
+      @include zen-new-row();
+      @include zen-grid-item(30, 2);
+    }
+  }
+
+  @include respond-to(l) {
+    &__date-col {
+      @include zen-grid-item(4, 1);
+    }
+
+    &__image-col {
+      @include zen-grid-item(3, 5);
+
+      img {
+        position: relative;
+        top: 5px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content-col {
+      @include zen-new-row(none);
+      @include zen-grid-item(32-5-2, 8);
+    }
   }
 }

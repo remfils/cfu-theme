@@ -37,7 +37,7 @@ h1.page-title,
   padding-left: 15px;
   padding-right: 15px;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     display: inline-block;
   }
 }

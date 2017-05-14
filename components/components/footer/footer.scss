@@ -41,9 +41,8 @@
   }
 
   .menu-item--expanded {
-    float: left;
-    display: inline-block;
-    width: 15%;
+    float: none;
+    width: 100%;
 
     .menu {
       margin-left: 0;
@@ -54,11 +53,32 @@
   a {
     color: black;
   }
+
+  @include respond-to(m) {
+    .menu-item--expanded {
+      float: left;
+      display: inline-block;
+      width: 30%;
+    }
+
+  }
+
+  @include respond-to(l) {
+
+    
+    .menu-item--expanded {
+      float: left;
+      display: inline-block;
+      width: 20%;
+    }
+
+  }
 }
 
 .footer-navigation {
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 15px;
   position: relative;
 
   &--container {
@@ -70,15 +90,14 @@
     left: 15px;
     height: 100%;
     line-height: 2;
-    position: absolute;
 
     .menu {
-      display: inline-block;
+      display: block;
       margin-left: 30px;
     }
 
     .menu li {
-      display: inline-block;
+      display: block;
       padding: 0 15px;
       
       a {
@@ -90,10 +109,36 @@
   &--logo {
     bottom: 0px;
     position: absolute;
-    right: 30px;
+    right: 5px;
 
     img {
-      height: 120px;
+      height: 40px;
+    }
+  }
+
+
+  @include respond-to(m) {
+    &--contacts {
+      position: absolute;
+      
+      .menu {
+        display: inline-block;
+        margin-left: 30px;
+      }
+
+      .menu li {
+        display: inline-block;
+        padding: 0 15px;
+        
+      }
+    }
+    
+    &--logo {
+      right: 30px;
+
+      img {
+        height: 120px;
+      }
     }
   }
 }

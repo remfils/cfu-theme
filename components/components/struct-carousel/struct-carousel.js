@@ -40,7 +40,16 @@
     slidesToShow: 9,
     slidesToScroll: 9,
     infinite: false,
-    draggable: false
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      }
+    ]
   });
   
 

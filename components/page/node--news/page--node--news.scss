@@ -12,18 +12,24 @@ $zen-columns: 24;
   @include zen-grid-container();
   
   &__sidebar {
-    @include zen-grid-item(1, 1);
+    @include zen-grid-item(5, 1);
+    padding-right: 30px;
     font-weight: bold;
-    width: 180px;
+    //width: 180px;
     text-align: right;
   }
 
   &__time-field {
+    display: none;
     margin-bottom: 25px; // to allign with image in news page
+
+    @include respond-to(xs) {
+      display: block;
+    }
   }
 
   &__content {
-    @include zen-grid-item(16, 6);
+    @include zen-grid-item(18, 6);
 
     > h2 {
       margin: 0;
@@ -72,6 +78,17 @@ $zen-columns: 24;
       width: 100%;
     }
   }
+
+  @include respond-to(xs) {
+    &__sidebar {
+    }
+
+
+    &__content {
+      @include zen-new-row(none);
+      @include zen-grid-item(16, 6);
+    }
+  }
   
 }
 
@@ -87,7 +104,7 @@ $zen-columns: 4;
   &__title {
     background-color: #2e3192;
     color: white;
-    display: inline-block;
+    display: block;
     min-width: 180px;
 
     font-size: 14px;
@@ -97,7 +114,9 @@ $zen-columns: 4;
     padding-right: 15px;
     margin-top: 0px;
 
-    
+    @include respond-to(xl) {
+      display: inline-block;
+    }
   }
   
   &__row {
@@ -107,11 +126,26 @@ $zen-columns: 4;
   }
 
   &__image {
-    @include zen-grid-item(1, 1);
+    @include zen-new-row();
+    @include zen-grid-item(4, 1);
     padding-top: 5px;
   }
 
   &__dsc {
-    @include zen-grid-item(3, 2);
+    @include zen-new-row();
+    @include zen-grid-item(4, 1);
+  }
+
+  @include respond-to(xs) {
+    &__image {
+      @include zen-new-row(none);
+      @include zen-grid-item(1, 1);
+      padding-top: 5px;
+    }
+
+    &__dsc {
+      @include zen-new-row(none);
+      @include zen-grid-item(3, 2);
+    }
   }
 }

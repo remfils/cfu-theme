@@ -1,0 +1,12 @@
+{# core/themes/classy/templates/block/block.html.twig #}
+{% extends 'core/themes/classy/templates/block/block.html.twig' %}
+
+{% block content %}
+  <div class="main-menu__container">
+    <div class="main-menu__mobile-btn"></div>
+
+    <div class="main-menu__content">
+      {{parent()}}
+    </div>
+  </div>
+{% endblock %}

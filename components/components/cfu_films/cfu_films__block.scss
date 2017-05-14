@@ -17,6 +17,10 @@
   .grid__content {
     background-color: #a01f62;
     min-height: 300px;
+
+    img {
+      width: 100%;
+    }
   }
 
   .grid__content:before {
