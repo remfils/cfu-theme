@@ -1,3 +1,25 @@
+* CONTROL
+** запустить gulp watch
+#+BEGIN_SRC emacs-lisp :tangle yes :result value
+  ;; start gulp watch buffer
+
+  (let ((watch-buffer "cfu/watch"))
+    (shell watch-buffer)
+    (set-buffer watch-buffer)
+    (term-send-raw-string "gulp watch\n"))
+#+END_SRC
+
+#+RESULTS:
+
+** убить gulp watch
+
+#+begin_src emacs-lisp :tangle yes :result value
+  ;; kill buffer
+
+  (let ((watch-buffer "cfu/watch"))
+    (kill-buffer watch-buffer))
+#+end_src
+
 * 0.0.2
 ** TODO сдандартизировать таблицы в css
 ** DONE дизайн хлебных крошек
