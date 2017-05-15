@@ -6,7 +6,7 @@
   (let ((watch-buffer "cfu/watch"))
     (shell watch-buffer)
     (set-buffer watch-buffer)
-    (term-send-raw-string "gulp watch\n"))
+    (process-send-string watch-buffer "gulp watch\n"))
 #+END_SRC
 
 #+RESULTS:
