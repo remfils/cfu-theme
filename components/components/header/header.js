@@ -19,4 +19,15 @@
   makeHeaderFixed();
   
   $window.scroll(makeHeaderFixed);
+
+
+  // menu mobile header show
+  var $main_menu_container = $('.header');
+
+  $('.main-menu__mobile-btn').click(function(e) {
+    if (e)
+      e.preventDefault();
+
+    $main_menu_container.toggleClass('main-menu--show-mobile');
+  })
 })(jQuery);

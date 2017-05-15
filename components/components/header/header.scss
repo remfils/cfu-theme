@@ -25,6 +25,100 @@ $logo_width: 202px;
   margin-bottom: 130px;
 }
 
+/* fix full height menu */
+html,
+body {
+  height: 100%;
+}
+
+.main-menu {
+  &--show-mobile {
+    @media (max-width: 1221px) {
+      .sf-depth-2 ul {
+        left: 0 !important;
+      }
+      
+      .main-menu__container {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .main-menu__content {
+        display: block;
+        left: 0px;
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        height: 100%;
+
+        ul {
+          background-color: lighten(#2E3192, 10%);
+          position: relative;
+          height: 100%;
+          padding-top: 70px;
+        }
+
+        li {
+          float: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  &__content {
+    display: none;
+
+    a {
+      transition: background-color 0.5s;
+    }
+    
+    a:hover,
+    .sfHover > a {
+      background-color: #2E3159;
+    }
+
+    ul.sf-menu .sf-sub-indicator {
+      height: 20px;
+    }
+
+    ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
+      top: 0;
+
+      @include respond-to(xxl) {
+        top: 3em;
+      }
+    }
+
+    li a {
+      color: white;
+    }
+
+    .menuparent ul {
+      background-color: #2E3192;
+    }
+  }
+
+  &__mobile-btn {
+    $menu-bar-width: 30px;
+    
+    background-image: url(../../../images-source/three-lines.png);
+    background-size: 100%;
+    cursor: pointer;
+    display: block;
+    height: 626px / 640px * $menu-bar-width;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: $menu-bar-width;
+    z-index: 10000;
+
+    @include respond-to(xxxl) {
+      display: none;
+    }
+  }
+}
+
 .header,
 %header {
   background-color: #2e3192;
@@ -35,6 +129,10 @@ $logo_width: 202px;
   width: 100%;
   /* width: 1600px; */
   z-index: 9999;
+
+  &--show-mobile {
+    
+  }
 
   .cfu-block--container {
     min-height: 70px;
@@ -131,65 +229,13 @@ $logo_width: 202px;
     clear: both;
   }
 
-  .main-menu {
-    &__content {
-      bottom: 0;
-      display: none;
-      left: $logo_width;
-      position: absolute;
-      width: auto;
-
-      a {
-        transition: background-color 0.5s;
-      }
-      
-      a:hover,
-      .sfHover > a {
-        background-color: #2E3159;
-      }
-
-      ul.sf-menu .sf-sub-indicator {
-        height: 20px;
-      }
-
-      ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
-        top: 3em;
-      }
-
-      li a {
-        color: white;
-      }
-
-      .menuparent ul {
-        background-color: #2E3192;
-      }
-    }
-
-    &__mobile-btn {
-      $menu-bar-width: 30px;
-      
-      background-image: url(../../../images-source/three-lines.png);
-      background-size: 100%;
-      cursor: pointer;
-      display: block;
-      height: 626px / 640px * $menu-bar-width;
-      position: absolute;
-      right: 20px;
-      top: 15px;
-      width: $menu-bar-width;
-      z-index: 9999;
-
-      @include respond-to(xxxl) {
-        display: none;
-      }
-    }
-  }
-
   @include respond-to(xxxl) {
     .main-menu__content {
       display: block;
-
-      
+      bottom: 0;
+      left: $logo_width;
+      position: absolute;
+      width: auto;
     }
 
     .header-block--vernadky-image {
