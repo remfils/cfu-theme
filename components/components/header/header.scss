@@ -8,6 +8,11 @@
 
 $logo_width: 202px;
 
+#block-mainnavigation {
+  position: absolute;
+  height: 100%;
+}
+
 .control-header {
   display: none;
   min-height: 30px;
