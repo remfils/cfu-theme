@@ -86,7 +86,7 @@ $zen-columns: 24;
 
     &__content {
       @include zen-new-row(none);
-      @include zen-grid-item(16, 6);
+      @include zen-grid-item(18, 6);      
     }
   }
   

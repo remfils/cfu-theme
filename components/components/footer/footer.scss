@@ -43,10 +43,15 @@
   .menu-item--expanded {
     float: none;
     width: 100%;
+    padding: 0 20px;
+
+    > a {
+      font-weight: bold;      
+    }
 
     .menu {
       margin-left: 0;
-      padding-top: 30px;
+      padding-top: 10px;      
     }
   }
 
