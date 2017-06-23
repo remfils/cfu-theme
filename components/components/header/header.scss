@@ -83,15 +83,20 @@ body {
       background-color: #2E3159;
     }
 
+    a.is-active {
+      background-color: #A01F62;
+      color: white !important;
+    }
+
     ul.sf-menu .sf-sub-indicator {
       height: 20px;
     }
 
-    ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
+    ul.sf-main > li.sfHover > ul {
       top: 0;
-
+      
       @include respond-to(xxl) {
-        top: 3em;
+        top: 3em;        
       }
     }
 
@@ -101,6 +106,7 @@ body {
 
     .menuparent ul {
       background-color: #2E3192;
+      border: 1px solid darken(#2E3192, 3%);
     }
   }
 

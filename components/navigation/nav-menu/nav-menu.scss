@@ -70,7 +70,8 @@ $zen-columns: 4;
 
 .menu--cfu {
   background-color: #fff;
-  margin-top: 24px;
+  border: 1px solid #CDCDCD;
+  margin-top: 12px;
   padding: 15px;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -91,5 +92,13 @@ $zen-columns: 4;
 
   .menu {
     margin-top: 0;
+  }
+
+  ul.sf-menu.sf-vertical {
+    width: 100%;
+  }
+
+  ul.sf-menu.sf-vertical.sf-shadow ul {
+    background-color: white;    
   }
 }

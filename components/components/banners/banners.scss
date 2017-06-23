@@ -3,3 +3,15 @@
     width: 100% / 9;
   }
 }
+
+.cfu-main-banners {
+  &__container {
+    text-align: center;
+    text-indent: 0;
+    
+    img {
+      image-rendering: pixelated;
+      height: 65px;
+    }
+  }
+}

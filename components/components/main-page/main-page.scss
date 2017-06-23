@@ -11,8 +11,6 @@
 
   /* height: 230px; */
 
-  padding-bottom: 20px;
-
   .view-content {
     margin-left: -10px;
     margin-right: -10px;
@@ -26,6 +24,7 @@
     float: left;
     padding-left: 10px;
     padding-right: 10px;
+    margin-bottom: 20px;
 
     @media (max-width: 999px) {
       width: 33.3%;
