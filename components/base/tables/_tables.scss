@@ -21,5 +21,32 @@ table {
 td,
 th {
   // Remove most spacing between table cells.
-  padding: 0;
+  padding: 5px;
+}
+
+$border-color: lighten(#2E3192, 40%);
+
+th {
+  
+  background-color: #2E3192;
+  border-right: 1px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  color: white;
+}
+
+th:first-child {
+  border-left: 1px solid $border-color;
+}
+
+th:last-child {
+  border-right: none;
+}
+
+td {
+  $border-color: lighten(grey, 40%);
+
+  
+  border-right: 1px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  border-left: 1px solid $border-color;
 }
