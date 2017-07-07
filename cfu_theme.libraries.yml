@@ -262,3 +262,9 @@ cfu_films__block:
   css:
     component:
       components/asset-builds/css/cfu_films__block.css: {}
+
+pdf_opener:
+  js:
+    js/pdf-opener.js: {}
+  dependencies:
+    - core/jquery
