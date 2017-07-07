@@ -96,10 +96,10 @@ dd {
 menu,
 ol,
 ul {
-  padding: 0 0 0 $indent-amount;
+  padding: 0 0 0 ($indent-amount - 15px);
 
   @include rtl {
-    padding: 0 $indent-amount 0 0;
+    padding: 0 ($indent-amount - 15px) 0 0;
   }
 }
 
