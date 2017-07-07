@@ -33,7 +33,7 @@
   }
 
   &__struct-list {
-    min-width: 150px;
+    min-width: 500px;
   }
 
   &__container-search-str {
@@ -53,6 +53,13 @@
     right: 15px;
     position: absolute;
   }
+}
+
+ul.films-search-form__date-dropdown > li:hover > ul,
+ul.films-search-form__date-dropdown > li.sfHover > ul,
+ul.films-search-form__struct-dropdown > li:hover > ul,
+ul.films-search-form__struct-dropdown > li.sfHover > ul, {
+  top: 40px;
 }
 
 .films-search-form__date-dropdown,
