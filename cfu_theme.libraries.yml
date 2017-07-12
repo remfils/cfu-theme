@@ -247,6 +247,11 @@ page--node--page:
   css:
     component:
       components/asset-builds/css/page--node--page.css: {}
+  js:
+    js/masonry.pkgd.min.js: {}
+    components/asset-builds/js/page--node--page.js: {}
+  dependencies:
+    - core/jquery
 
 cfu_announcements:
   css:
