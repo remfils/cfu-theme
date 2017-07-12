@@ -1,0 +1,19 @@
+{{ attach_library('cfu_theme/layouts') }}
+{{ attach_library('cfu_theme/news-page') }}
+
+<div class="layout-3col-teasers__row views-row cfu-row--shadow-highlight">
+  <div class="views-field views-field-created layout-3col-teasers__date-col">
+    {{ node.getCreated() | date("Y-m-d") }}
+  </div>
+  <div class="views-field views-field-field-image layout-3col-teasers__image-col">
+    <a href="{{url}}">
+      {{ content.field_image }}
+    </a>
+  </div>
+  <div class="views-field views-field-title-1 layout-3col-teasers__content-col">
+    <div class="news-item-teaser__title">
+      <a href="{{url}}" hreflang="ru">{{ label }}</a>
+    </div>
+    <div class="news-item__body">{{ content.body }}</div>
+  </div>
+</div>
