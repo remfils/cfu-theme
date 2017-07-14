@@ -8,7 +8,7 @@
   $news-text-height: 180px;
   $news-text-padding: 10px;
   $gutter: 25px;
-  
+
   color: white;
   font-size: 16px;
 
@@ -19,7 +19,7 @@
   .view-content {
     overflow: hidden;
   }
-  
+
   .views-field-created {
     text-align: center;
     font-weight: bold;
@@ -47,7 +47,7 @@
   .more-link:after {
     $image-res: 1210px / 1911px; // width / height
     $block-width: 30px;
-    
+
     content: ' ';
     background-image: url(../images/more-news-arrow.png);
     background-size: 100% 100%;
@@ -62,7 +62,7 @@
   .more-link.opened {
     cursor: default;
   }
-  
+
   .more-link.opened:after {
     display: none;
   }
@@ -82,7 +82,7 @@
       min-height: $news-text-height;
 
 
-      
+
     }
   }
 }

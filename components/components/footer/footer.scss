@@ -13,10 +13,8 @@
   //@include padding(1 0, s);
 
   background-color: #e2e2e2;
-
   padding-bottom: 0;
-
-  margin-top: 12px;
+  margin-top: 0px;
 
   a {
     color: white;
@@ -45,12 +43,12 @@
     padding: 0 20px;
 
     > a {
-      font-weight: bold;      
+      font-weight: bold;
     }
 
     .menu {
       margin-left: 0;
-      padding-top: 10px;      
+      padding-top: 10px;
     }
   }
 
@@ -69,7 +67,7 @@
 
   @include respond-to(l) {
 
-    
+
     .menu-item--expanded {
       float: left;
       display: inline-block;
@@ -88,7 +86,7 @@
   &--container {
     min-height: 80px;
   }
-  
+
   &--contacts {
     color: white;
     left: 15px;
@@ -103,7 +101,7 @@
     .menu li {
       display: block;
       padding: 0 15px;
-      
+
       a {
         color: white;
       }
@@ -124,7 +122,7 @@
   @include respond-to(m) {
     &--contacts {
       position: absolute;
-      
+
       .menu {
         display: inline-block;
         margin-left: 30px;
@@ -133,10 +131,10 @@
       .menu li {
         display: inline-block;
         padding: 0 15px;
-        
+
       }
     }
-    
+
     &--logo {
       right: 30px;
 
@@ -149,5 +147,5 @@
 
 .cfu-block--footer-banners {
   border-bottom: 1px solid color(border);
-  border-top: 1px solid color(border);  
+  border-top: 1px solid color(border);
 }

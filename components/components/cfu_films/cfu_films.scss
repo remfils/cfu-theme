@@ -17,3 +17,7 @@
     }
   }
 }
+
+.cfu-block--all-padding [class*="block-grid-"] > .grid {
+  margin: 0;
+}

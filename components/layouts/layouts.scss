@@ -20,7 +20,7 @@ $zen-gutters: 1%;
 $zen-gutter-method: 'margin';
 
 h1.page-title {
-  margin-bottom: 50px;  
+  margin-bottom: 50px;
 }
 
 h1.page-title,
@@ -81,17 +81,18 @@ h1.cfu-block__title__text > a {
   }
 
   &--white {
-    background-color: #fff;    
+    background-color: #fff;
   }
 
   &--all-padding {
     padding: 15px;
+    margin-bottom: 12px;
   }
 
   &--bordered {
     border: 1px solid #CDCDCD;
   }
-  
+
   &__title {
     @include zen-grid-container();
     min-height: 35px;
@@ -110,7 +111,7 @@ h1.cfu-block__title__text > a {
 
     &__text {
       @include zen-grid-item(8,1);
-      
+
       font-size: 14px;
       line-height: 40px;
       margin-top: 0;
@@ -162,6 +163,7 @@ h1.cfu-block__title__text > a {
 .cfu-block--all-padding [class*="block-column-"] > .grid,
 .cfu-block--all-padding .item-list > [class*="block-column-"] > .grid {
   padding-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .second-level-page-container {
@@ -196,7 +198,7 @@ $zen-gutter-method: 'margin';
 
 .cfu-row {
   padding-bottom: 30px;
-  
+
   &--date-col {
     font-weight: bold;
     text-align: right;
