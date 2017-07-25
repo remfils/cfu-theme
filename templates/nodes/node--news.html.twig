@@ -63,19 +63,19 @@
 {% set attributes = attributes.removeAttribute('class') %}
 
 {% block heading %}
-  
+
 {% endblock heading %}
 
 {% set footer = display_submitted or node.in_preview or not node.isPublished() %}
 {% block footer %}
-  
+
 {% endblock %}
 
 {% block content %}
 
   <div class="node-news__sidebar">
     <div class="node-news__time-field">
-      {{node.getCreatedTime() | date("d-m-Y")}}
+      {{node.getCreated() | date("d-m-Y")}}
     </div>
 
     {{ addtoanybuttons }}
@@ -103,7 +103,7 @@
       {% endif %}
 
     </div>
-    
+
     {{ content | without('field_film_video', 'field_image') }}
 
     {{title_suffix}}
