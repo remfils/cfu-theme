@@ -16,6 +16,7 @@ base:
   dependencies:
     - cfu_theme/clearfix
     - cfu_theme/visually-hidden
+    - cfu_theme_impared/impared-js
 
 layouts:
   css:

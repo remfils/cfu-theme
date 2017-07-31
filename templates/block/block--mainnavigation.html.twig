@@ -1,6 +1,15 @@
 {# core/themes/classy/templates/block/block.html.twig #}
 {% extends 'core/themes/classy/templates/block/block.html.twig' %}
 
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'main-navigation'
+  ]
+%}
+
 {% block content %}
   <div class="main-menu__container">
     <div class="main-menu__mobile-btn"></div>

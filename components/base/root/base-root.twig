@@ -17,7 +17,7 @@
       <title>{{ title }}</title>
     {% endblock %}
   </head>
-  <body {{ attributes }}>
+  <body {{ attributes.setAttribute('id', 'CfuBody') }}>
     {% block body %}
       {{ content }}
     {% endblock %}

@@ -1,0 +1,19 @@
+<div class="grid__content">
+  <div class="views-field views-field-field-image">
+    <div class="field-content">
+      <a href="{{ url }}">
+        {{content.field_image}}
+      </a>
+    </div>
+  </div>
+  <div class="views-field views-field-created">
+    <span class="field-content">
+      {{ node.getCreatedTime | format_date('data_anonsa')  }}
+    </span>
+  </div>
+  <div class="views-field views-field-body">
+    <div class="field-content">
+      {{ content.body }}
+    </div>
+  </div>
+</div>
