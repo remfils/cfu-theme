@@ -55,9 +55,11 @@
 {% block page_title %}
 
   <h1 class="page-title">
-    <a href="{{url('cfu_blocks.cfu_announcements')}}">ВСЕ АНОНСЫ</a>
+    <a href="{{url('cfu_blocks.cfu_announcements')}}">
+      {{ "ALL ANNOUNCEMENTS" | t}}
+    </a>
   </h1>
-  
+
   {{ page.help }}
   {{ page.content | without('addtoanybuttons') }}
 {% endblock %}

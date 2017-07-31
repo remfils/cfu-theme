@@ -10,10 +10,13 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
   <div class="cfu-block--container footer-navigation--container">
-    
+
     <div class="footer-navigation--contacts">
 
-      <span>© КФУ им. В.И.Вернадского {{ "now"|date("Y") }}</span>
+      <span>©
+        {{"V.I. Vernadsky Crimean Federal University" | t}}
+        {{ "now"|date("Y") }}
+      </span>
 
       {# Menu. #}
       {% block content %}

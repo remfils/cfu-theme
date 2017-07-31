@@ -2,20 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Сайт находится на обслуживании</title>
+    <title>
+      {{"Website is under maintenance" | t}}
+
+    </title>
   </head>
   <body style="margin: 0; min-width: 320px;">
     <header>
       <div style="background-color: #2e3192; color: white; min-height: 130px; top: 32px; transition: height 0.5s ease 0s; width: 100%; z-index: 9999;">
         <div style="width: 100%; text-align: center; padding: 50px 0;">
-          <a href="/" title="Home" rel="home" style="font-family: Arial; font-size: 25px; font-weight: bold; color: white; text-decoration: none;">КРЫМСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ ИМЕНИ В. И. ВЕРНАДСКОГО</a>
+          <a href="/" title="Home" rel="home" style="font-family: Arial; font-size: 25px; font-weight: bold; color: white; text-decoration: none;">
+            V.I. VERNADSKY CRIMEAN FEDERAL UNIVERSITY
+          </a>
         </div>
       </div>
     </header>
     <section style="height: 600px; width: 100%; background-color: #e3e3e3; padding: 24px 0">
       <div style="height: 100%; width: 100%; text-align: center; max-width: 1600px; margin: auto; background-color: #fff;">
-        <h3 style="margin: 0; padding: 25px 25px; font-family: Arial; font-size: 30px;">Сайт находится на обслуживании</h3>
-        <h5 style="margin: 0; padding: 0 25px 25px 25px; font-family: Arial; font-size: 20px;">В настоящее время на сайте ведутся технические работы. Зайдите пожалуйста позже.</h5>
+        <h3 style="margin: 0; padding: 25px 25px; font-family: Arial; font-size: 30px;">
+          {{ "Website is under maintenance" | t}}
+        </h3>
+        <h5 style="margin: 0; padding: 0 25px 25px 25px; font-family: Arial; font-size: 20px;">
+          {{"Currently the site being down for maintenance. Please visit later." | t}}
+        </h5>
         <div style="height: 400px; width: 100%;">
           <img style="height: 250px; padding: 75px 0;" src="/sites/default/files/logo.png" alt="КФУ">
         </div>
@@ -24,7 +33,9 @@
     <footer>
       <div style="background-color: #2e3192; color: white; min-height: 130px; top: 32px; transition: height 0.5s ease 0s; width: 100%; z-index: 9999;">
         <div style="width: 100%; text-align: center; padding: 50px 0;">
-          <span style="color: white; height: 100%; line-height: 2;">© КФУ им. В.И.Вернадского 2017</span>
+          <span style="color: white; height: 100%; line-height: 2;">
+            © {{ "V.I. Vernadsky Crimean Federal University" | t}}
+          </span>
         </div>
       </div>
     </footer>
