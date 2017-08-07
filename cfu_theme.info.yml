@@ -82,6 +82,7 @@ libraries:
   #- cfu_theme/anouncment-block
   - cfu_theme/banners
   - cfu_theme/pdf_opener
+  - cfu_theme/custom
 
 
 # This section is used by the contrib module, Component Libraries. It allows you

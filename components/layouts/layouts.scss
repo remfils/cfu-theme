@@ -29,13 +29,15 @@ h1.page-title,
   color: white;
   display: block;
   min-width: 180px;
-
   font-size: 14px;
-  line-height: 40px;
+  min-height: 40px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @include respond-to(xl) {
     display: inline-block;

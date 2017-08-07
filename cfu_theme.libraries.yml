@@ -274,3 +274,8 @@ pdf_opener:
     js/pdf-opener.js: {}
   dependencies:
     - core/jquery
+
+custom:
+  css:
+    component:
+      custom.css: {}
