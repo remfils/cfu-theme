@@ -37,6 +37,14 @@
     min-width: 500px;
   }
 
+  &__type-title {
+    min-width: 250px;
+  }
+
+  &__type-list {
+    min-width: 300px;
+  }
+
   &__container-search-str {
     float: right;
     margin-top: 7px;
@@ -47,7 +55,7 @@
   }
 
   &__search_str {
-    min-width: 500px;
+    min-width: 400px;
   }
 
   &__submit {
@@ -81,9 +89,9 @@ ul.films-search-form__struct-dropdown > li.sfHover > ul, {
 
 li.films-search-form__date-title > a,
 li.films-search-form__struct-title > a,
+li.films-search-form__type-title > a,
 li.films-search-form__content-type-title > a {
   padding-top: 0px;
   padding-bottom: 0px;
-
   line-height: 40px;
 }
