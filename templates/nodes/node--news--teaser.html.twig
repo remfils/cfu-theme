@@ -3,7 +3,7 @@
 
 <div class="layout-3col-teasers__row views-row cfu-row--shadow-highlight">
   <div class="views-field views-field-created layout-3col-teasers__date-col">
-    {{ node.getCreated() | date("Y-m-d") }}
+    {{ node.getCreatedDate | date("Y-m-d") }}
   </div>
   <div class="views-field views-field-field-image layout-3col-teasers__image-col">
     <a href="{{url}}">
