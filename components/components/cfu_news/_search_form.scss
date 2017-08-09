@@ -24,6 +24,10 @@
     background-color: #a01f62;
   }
 
+  .sfHover > a {
+    background-color: darken(#2e3192, 10%);
+  }
+
   &__filter-header {
     float: left;
     display: inline-block;
@@ -45,7 +49,7 @@
   }
 
   &__struct-list {
-    min-width: 300px;
+    min-width: 500px;
   }
 
   &__content-type-title {
@@ -75,6 +79,11 @@
     float: left;
   }
 
+
+  ul.sf-menu.sf-main > li:hover > ul,
+  ul.sf-menu.sf-main > li.sfHover > ul {
+    top: 40px;
+  }
 }
 
 .news-search-form__date-dropdown,

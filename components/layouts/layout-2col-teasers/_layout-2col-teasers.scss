@@ -1,0 +1,74 @@
+@import 'init';
+@import "zen-grids";
+
+$zen-columns: 32;
+$zen-gutters: 1%;
+$zen-gutter-method: 'margin';
+
+.layout-2col-teasers {
+  
+  &__row {
+    @include zen-grid-container();
+
+    padding-bottom: 20px;
+  }
+
+  &__image-col {
+    @include zen-new-row();
+    @include zen-grid-item(32, 1);
+
+    text-align: center;
+    margin-bottom: 15px;
+
+    img {
+      position: relative;
+      top: 5px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content-col {
+    @include zen-new-row();
+    @include zen-grid-item(30, 2);
+  }
+
+  @include respond-to(xxs) {
+    &__image-col {
+      @include zen-new-row(none);
+      @include zen-grid-item(32, 1);
+
+      img {
+        position: relative;
+        top: 5px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content-col {
+      @include zen-new-row();
+      @include zen-grid-item(30, 2);
+    }
+  }
+
+  @include respond-to(l) {
+    &__image-col {
+      @include zen-grid-item(6, 1);
+
+      padding-left: 15px;
+      
+      img {
+        position: relative;
+        top: 5px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content-col {
+      @include zen-new-row(none);
+      @include zen-grid-item(32-7-2, 7);
+    }
+  }
+}

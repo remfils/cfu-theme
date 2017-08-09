@@ -13,6 +13,7 @@
 // improve front-end performance.
 @import 'layout-swap/layout-swap';
 @import 'layout-3col-teasers/layout-3col-teasers';
+@import 'layout-2col-teasers/layout-2col-teasers';
 @import 'layout-2col-news/layout-2col-news';
 
 $zen-columns: 8;
@@ -165,7 +166,7 @@ h1.cfu-block__title__text > a {
 .cfu-block--all-padding [class*="block-column-"] > .grid,
 .cfu-block--all-padding .item-list > [class*="block-column-"] > .grid {
   padding-bottom: 0;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
 }
 
 .second-level-page-container {

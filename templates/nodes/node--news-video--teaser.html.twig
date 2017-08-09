@@ -1,0 +1,19 @@
+{{ attach_library('cfu_theme/layouts') }}
+{{ attach_library('cfu_theme/news-page') }}
+
+
+<div class="layout-2col-teasers__row views-row cfu-row--shadow-highlight">
+  <div class="views-field views-field-field-image layout-2col-teasers__image-col">
+    <a href="{{url}}">
+      {{ content.field_image }}
+    </a>
+  </div>
+  <div class="views-field views-field-title-1 layout-2col-teasers__content-col">
+    <div class="film-teaser__title">
+      <a href="{{url}}" hreflang="ru">{{ label }}</a>
+    </div>
+    <div class="film-teaser__body">
+      {{ content.body }}
+    </div>
+  </div>
+</div>

@@ -13,6 +13,15 @@
     }
   }
 
+  &__title {
+    text-align: center;
+    line-height: 1.5;
+
+    p {
+      text-indent: 0;
+    }
+  }
+
   .grid__content {
     background-color: #a01f62;
     min-height: 300px;

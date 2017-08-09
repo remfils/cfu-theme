@@ -23,7 +23,7 @@ $no-color: #ffc208;
   padding-right: 50px;
 
   height: 230px;
-  
+
   .views-field-field-title {
   }
 
@@ -32,7 +32,7 @@ $no-color: #ffc208;
   }
 
   /* #struct borders */
-  
+
   .views-field-field-image img {
     border-style: solid;
     border-width: 4px;
@@ -58,7 +58,7 @@ $no-color: #ffc208;
 
   .views-field-field-image img {
     margin: 0 auto;
-    border-radius: 50%;    
+    border-radius: 50%;
   }
 
   .views-field-field-title .field-content {
@@ -73,6 +73,10 @@ $no-color: #ffc208;
     top: 50%;
     width: 100%;
     left: 0;
+  }
+
+  .slick-arrow {
+    background: none;
   }
 
   .slick-prev:before,
@@ -116,7 +120,7 @@ $zen-gutter-width: 0;
       display: block;
     }
   }
-  
+
   &__btn {
     text-align: center;
     color: white;
@@ -153,7 +157,7 @@ $zen-gutter-width: 0;
   .active.struct_тo {
     background-color: darken($no-color, 25);
   }
-  
+
   .struct_vpo {
     background-color: $vpo-color;
   }

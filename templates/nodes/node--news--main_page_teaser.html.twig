@@ -4,14 +4,21 @@
       <a href="{{ url }}">
         {{content.field_image}}
       </a>
+      <div class="field-label">
+        {{label}}
+      </div>
     </div>
+
   </div>
+
   <div class="views-field views-field-created">
     <span class="field-content">
       {{ node.getCreatedTime | format_date('data_anonsa')  }}
     </span>
   </div>
+
   <div class="views-field views-field-body">
+
     <div class="field-content">
       {{ content.body }}
     </div>

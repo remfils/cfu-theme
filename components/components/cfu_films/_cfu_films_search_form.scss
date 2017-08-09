@@ -8,7 +8,8 @@
 }
 
 .films-search-form {
-  .active {
+  .active,
+  .sfHover > a {
     background-color: darken(#a01f62, 10%);
   }
 
@@ -53,6 +54,11 @@
     right: 15px;
     position: absolute;
     top: 0;
+  }
+
+  ul.sf-menu.sf-main > li:hover > ul,
+  ul.sf-menu.sf-main > li.sfHover > ul {
+    top: 40px;
   }
 }
 
