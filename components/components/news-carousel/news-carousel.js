@@ -7,7 +7,7 @@
         slick.autoPlay();
         slick.paused = false;
         slick.options.autoplaySpeed = 5000;
-        slick.options.speed = 1000;
+        slick.options.speed = 2000;
 
         if (e.handled !== true) {
           var $current_slide = $(slick.$slides[slick.currentSlide])
